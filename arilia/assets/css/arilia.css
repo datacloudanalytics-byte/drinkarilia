@@ -105,7 +105,7 @@ p + p { margin-top: 0.9em; }
 .arilia-header__cta .wp-block-button__link { padding: 0.7rem 1.2rem; font-size: 0.875rem; }
 
 /* ---------- Home hero: ruby poster with the bottle in an arch ---------- */
-.arilia-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: clamp(1.5rem, 5vw, 5rem); background: var(--ruby); color: var(--cream); padding: 0 var(--pad-x); min-height: min(86vh, 820px); }
+.arilia-hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); align-items: center; gap: clamp(1.5rem, 4vw, 4rem); background: var(--ruby); color: var(--cream); padding: 0 var(--gutter); min-height: min(86vh, 820px); }
 .arilia-hero__copy { gap: 1.25rem; padding: clamp(2.5rem, 6vw, 5rem) 0; }
 .arilia-hero .arilia-eyebrow { color: var(--cream); opacity: 0.9; }
 .arilia-hero h1 { font-family: var(--font-body); font-weight: 800; text-transform: uppercase; letter-spacing: -0.03em; line-height: 0.98; color: var(--white); font-size: clamp(2.9rem, 5vw, 5rem); max-width: 14ch; }
@@ -116,9 +116,10 @@ p + p { margin-top: 0.9em; }
 .arilia-hero .wp-block-button__link:hover { background: var(--gold); border-color: var(--gold); color: var(--ruby-deep); }
 .arilia-hero .is-style-outline .wp-block-button__link { background: transparent; color: var(--cream); border-color: rgba(255, 252, 247, 0.6); }
 .arilia-hero__meta { font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.02em; color: #f6dadf; }
-.arilia-hero__art { align-self: end; justify-self: end; width: min(100%, 560px); padding-top: clamp(1.5rem, 4vw, 3rem); }
-.arilia-hero__image { margin: 0 !important; }
-.arilia-hero__image img { width: 100%; aspect-ratio: 2 / 3; max-height: 780px; object-fit: cover; object-position: center top; border-radius: 50% 50% 0 0 / 38% 38% 0 0; display: block; }
+/* The arch: starts at the top edge of the hero, runs the full height down to the ribbon. */
+.arilia-hero__art { align-self: stretch; justify-self: center; width: min(100%, 560px); display: flex; align-items: stretch; }
+.arilia-hero__image { margin: 0 !important; width: 100%; height: 100%; }
+.arilia-hero__image img { width: 100%; height: 100%; max-height: none; object-fit: cover; object-position: center; border-radius: 50% 50% 0 0 / 48% 48% 0 0; display: block; }
 
 /* ---------- Ribbon ----------------------------------------------------- */
 .arilia-ribbon { background: var(--gold); color: var(--ruby-deep); text-align: center; padding: 1rem var(--gutter); }
@@ -321,7 +322,8 @@ p + p { margin-top: 0.9em; }
 	.arilia-hero h1 { max-width: none; }
 	.arilia-hero .arilia-lead { margin-inline: auto; }
 	.arilia-hero__buttons { justify-content: center; }
-	.arilia-hero__art { width: min(88%, 420px); justify-self: center; padding-top: 0; }
+	.arilia-hero__art { width: min(88%, 420px); justify-self: center; align-self: auto; }
+	.arilia-hero__image img { height: auto; aspect-ratio: 2 / 3; }
 	.arilia-story, .arilia-flavour-hero { grid-template-columns: 1fr; }
 	.arilia-story__art { max-width: 520px; margin: 0 auto; }
 	.arilia-flavour-hero__copy { text-align: center; align-items: center; }

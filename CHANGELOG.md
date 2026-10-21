@@ -2,7 +2,7 @@
 
 ## 2.0.1 — 2026-10-21
 
-- Home hero restyled as the ruby poster: full-bleed background, bold white uppercase headline with gold accent, bottle in a tall arch, gold flavour ribbon.
+- Home hero restyled as the ruby poster: full-bleed background, bold white uppercase headline with gold accent, bottle in a tall arch that spans the full hero height, gold flavour ribbon.
 
 ## 2.0.0 — 2026-10-21
 
