@@ -1,5 +1,5 @@
 <?php
 return array(
 	'dependencies' => array( 'wp-blocks', 'wp-element', 'wp-block-editor', 'wp-components', 'wp-server-side-render' ),
-	'version'      => '2.0.1',
+	'version'      => '2.0.2',
 );

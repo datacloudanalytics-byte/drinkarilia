@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.2 — 2026-10-21
+
+- Stylesheet now also styles pages that still hold 1.x content (hero arch, ribbon, story, connect band), so the poster hero shows before "Upgrade page layouts" is run.
+
 ## 2.0.1 — 2026-10-21
 
 - Home hero restyled as the ruby poster: full-bleed background, bold white uppercase headline with gold accent, bottle in a tall arch that spans the full hero height, gold flavour ribbon.
