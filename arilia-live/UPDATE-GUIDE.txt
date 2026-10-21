@@ -1,0 +1,108 @@
+ARILIA 1.2 DESIGN UPDATE
+
+1. Create a GoDaddy backup of the current WordPress site.
+2. WordPress > Appearance > Themes > Add New > Upload Theme.
+3. Upload Arilia-WordPress-Theme.zip.
+4. Review the installed/new theme comparison, then choose Replace current with uploaded.
+5. Clear the GoDaddy site cache and reload the website in a private window.
+
+Do NOT recreate starter pages. This update styles your existing Arilia pages.
+Page text, images, page IDs, links and publishing status remain in WordPress.
+If you edited theme files separately, back them up before replacing the theme.
+
+Check Home, Products, each flavour, Our Story and Contact on desktop and phone.
+Verify full bottles, aligned cards/buttons, no sideways scrolling, mobile menu,
+keyboard focus and contact destinations. No messages were sent during testing.
+
+Rollback: restore the previous theme ZIP or GoDaddy backup.
+
+Changed files versus 1.0:
+style.css: version 1.1.0.
+functions.php: loads refinement CSS on the site and in the editor.
+assets/refinement.css: typography, spacing, image proportions, grid, footer,
+contact button hierarchy and responsive styles.
+assets/bottle-mask.svg: presentation mask for the original group artwork.
+UPDATE-GUIDE.txt and VALIDATION.md: update instructions and review status.
+
+Artwork is the existing approved set. Product cards still reference the group
+image using a display mask; separate approved product photography would be the
+best next asset upgrade. No bottle labels have been repainted.
+
+1.2 restores ruby and gold backgrounds, curved bottle displays, pastel flavour
+backgrounds, decorative curves and bold headings. Alignment fixes remain.
+
+1.3 HEADER UPDATE
+Navigation: Flavours, Our Story, Contact, Stock Arilia. Logo links home.
+Stock Arilia links to Contact / Distribution enquiries.
+If a header was customized and saved in the Site Editor, WordPress may retain
+that saved header instead of the theme default. Review it in the Site Editor;
+reset only the Header customization if you want this new theme header.
+Do not recreate starter pages.
+
+1.4 STORY AND TAGLINE
+Our Story gets a balanced image/text layout and readable line lengths.
+Hero, story, lineup and images with the arilia-poster CSS class fit inside
+the viewport height, without cropping. Scroll to the image to see it in full.
+The website brand line now reads A Little Wonder, including saved header
+paragraphs using the arilia-brand-line class. Text baked into bottle artwork
+remains unchanged. Theme update does not rewrite saved page content.
+
+1.5 LOGO
+Supplied embossed Arilia / A Little Wonder logo used in header and footer.
+Original ivory textured background retained; no change to the artwork.
+Image is compressed as WebP. Header/footer logo links to the homepage.
+The separate text tagline is removed to avoid duplication. Saved wordmark
+paragraphs with arilia-wordmark also render the logo automatically.
+
+1.6: latest supplied transparent logo replaces the ivory-background version
+in header and footer. Original artwork and tagline weight preserved.
+New asset URL prevents the previous logo being reused from browser cache.
+
+1.7 COMPOSITION
+Retains section background colours and the exact 1.6 logo. Hero content now
+uses a centred bounded grid to reduce the excessive desktop gap. Subtle
+shadows add depth. Editorial headings use charcoal with green accents.
+Upload theme replacement and clear cache; do not re-import starter pages.
+
+1.8 UPDATED BOTTLE BRANDING
+Replaces pomegranate, pomegranate-apple and seven-flavour collection artwork
+with the supplied refreshed-logo 250 ml images. Existing theme asset paths
+are retained so saved pages and product displays receive the new artwork.
+Backgrounds, website logo, arch styling and page copy are unchanged.
+Clear GoDaddy/CDN and browser caches after replacing the theme. Images
+manually copied into the WordPress Media Library need replacement separately.
+The supplied orange 200 ml and pomegranate 340 ml posters are not used in
+the existing seven-flavour 250 ml range. No bottle artwork was repainted.
+
+1.9 IMAGE REFRESH FIX
+New versioned filenames prevent reuse of old cached bottle images. Saved
+Arilia hero, story, lineup and flavour image blocks now render the refreshed
+artwork automatically, including copies referencing Media Library images.
+Old responsive image candidates are removed for those blocks. Unrelated
+images and all saved page content remain intact.
+Upload this ZIP, confirm new version 1.9.0, replace the current theme, then
+clear GoDaddy site cache to refresh cached page HTML. Do not recreate pages.
+
+1.10 CAMPAIGN POSTERS
+Homepage hero uses the supplied cream/ruby landscape poster. Its Explore
+Arilia area links to Products (the complete banner is clickable). Flavours
+page intro uses the supplied green seven-flavour poster. Existing saved
+hero blocks update on render; no starter import required. Posters fit fully
+without cropping. Upload replacement and clear GoDaddy page cache.
+The supplied hero artwork says 340 ml; catalogue remains 250 ml. Artwork
+is used as supplied. Confirm packaging size before public promotion.
+
+1.11: homepage uses the supplied warm ivory banner without the extra
+upper-left logo. Fresh asset URL; Flavours banner and navigation retained.
+Upload replacement and clear GoDaddy page cache.
+
+1.12 COMPACT HEADER
+The header is roughly half its previous height (about 90px instead of 187px
+on desktop): the "Meet the Arilia 250 ml collection" strip is hidden, the
+logo is shown at 118px wide (96px on phones) and the header padding is
+tightened. The homepage hero poster and the Flavours poster now fit on the
+first screen of a 1366x768 laptop and a 1440x900 desktop. The same header is
+used on every page, including the footer logo at 150px.
+Saved headers customised in the Site Editor keep their own content, but the
+new sizing still applies because it is CSS. Upload replacement, confirm
+version 1.12.0, then clear the GoDaddy page cache.

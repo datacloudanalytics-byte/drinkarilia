@@ -1,0 +1,342 @@
+/* Arilia 1.1: presentation upgrades for existing editable pages. */
+:root{--arilia-ruby:#74162c;--arilia-cream:#fcf9f3;--arilia-ink:#2f2527;--arilia-line:#e5dbd2;--arilia-gold:#eecb8d}
+body{background:var(--arilia-cream);color:var(--arilia-ink);-webkit-font-smoothing:antialiased}
+html{scroll-padding-top:24px}
+a{transition:color .18s ease,background-color .18s ease}
+a:focus-visible,button:focus-visible{outline:3px solid #246157;outline-offset:5px}
+.arilia-header{border-bottom:1px solid var(--arilia-line)}
+.arilia-announcement{font-size:10px;letter-spacing:1.6px;padding:9px 20px;background:#74162c}
+.arilia-header-inner{max-width:1352px;padding:22px 5%;min-height:102px}
+.arilia-wordmark{font-size:44px;letter-spacing:-2px}
+.arilia-brand-line{font-size:8px;letter-spacing:2.2px;margin-top:7px!important}
+.arilia-navigation{font-size:13px;letter-spacing:.015em}
+.arilia-navigation .wp-block-navigation__container{gap:30px}
+.arilia-navigation .wp-block-navigation-item__content:hover{text-decoration:underline;text-underline-offset:7px}
+.arilia-main :where(h1,h2){font-family:Arial,Helvetica,sans-serif;font-weight:700;line-height:1.06;letter-spacing:-.045em;text-wrap:balance}
+.arilia-main h1{font-size:clamp(40px,5.3vw,74px)}
+.arilia-main h2{font-size:clamp(30px,3.25vw,46px)}
+.arilia-main p{font-size:16px;line-height:1.75}
+.arilia-eyebrow{font-size:10px!important;letter-spacing:2px;line-height:1.6;margin-bottom:20px}
+.arilia-main .wp-block-button__link{font-size:13px;min-height:48px;padding:15px 23px;border-radius:4px;letter-spacing:.01em}
+.arilia-main .wp-block-button__link:hover{background:#501021;color:#fffaf2}
+.arilia-main .wp-block-buttons{margin-top:26px}
+/* Bounded hero: the complete bottle remains visible at every width. */
+.arilia-hero{grid-template-columns:1fr 1fr;min-height:0;max-width:1440px;margin:auto!important;background:var(--arilia-cream);align-items:center}
+.arilia-hero-copy{padding:64px 12% 64px 10%;align-self:center}
+.arilia-hero h1{font-size:clamp(40px,5.15vw,72px);color:var(--arilia-ruby);line-height:1.04;margin-bottom:26px}
+.arilia-hero h1 em{color:#a95e2c}
+.arilia-hero .arilia-eyebrow{color:var(--arilia-ruby)}
+.arilia-hero .arilia-intro{color:#5c4d50;font-size:15px;max-width:385px}
+.arilia-hero .wp-block-button__link{background:var(--arilia-ruby);color:var(--arilia-cream)}
+.arilia-hero .wp-block-button__link:hover{background:#501021}
+.arilia-hero-note{font-size:11px!important;color:#74666a;margin-top:24px!important}
+.arilia-hero-image{margin:32px 7% 32px 0!important;border-radius:8px;align-self:center;height:auto;background:#efe5d6;overflow:hidden}
+.arilia-hero-image img{width:100%;height:auto;max-height:none;object-fit:contain;display:block}
+.arilia-ribbon{padding:19px 5%;background:#efe6d9;border-block:1px solid #e2d6c5}
+.arilia-ribbon p{font-size:10px;line-height:1.8;letter-spacing:1.8px}
+.arilia-section{padding:76px max(5%,calc((100% - 1216px)/2))}
+.arilia-centred>h2{max-width:780px;margin:0 auto 22px}
+.arilia-centred>p{max-width:590px;color:#66575a}
+.arilia-lineup{max-width:1216px;margin:34px auto!important;overflow:hidden;border-radius:8px;border:1px solid var(--arilia-line)}
+.arilia-lineup img{display:block;width:100%;height:auto}
+.arilia-story{grid-template-columns:1fr 1fr;background:#eee4d6;align-items:center;max-width:1440px;margin:auto!important}
+.arilia-story-image{margin:0!important;min-height:0;height:auto;align-self:center}
+.arilia-story-image img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.arilia-story-copy{padding:54px 13%;align-self:center}
+.arilia-story-copy h2{font-size:clamp(32px,3.7vw,52px);margin-bottom:24px}
+.arilia-story-copy p{font-size:15px;color:#5c4d50}
+/* Catalogue: a compact intro, consistent product scale and card baselines. */
+.arilia-products-hero{padding:52px max(5%,calc((100% - 1216px)/2));background:#f1e9df;border-bottom:1px solid var(--arilia-line)}
+.arilia-products-hero h1{font-size:clamp(38px,4.4vw,62px);max-width:1000px;margin-bottom:20px}
+.arilia-products-hero .arilia-eyebrow{margin-bottom:16px}
+.arilia-products-hero>p:last-child{font-size:15px;line-height:1.7;color:#625256;max-width:590px}
+.arilia-products-hero:after{display:none}
+.arilia-jump{padding:17px 5%;gap:22px;background:var(--arilia-cream)}
+.arilia-jump .wp-block-buttons{margin:0}
+.arilia-jump-buttons .wp-block-button__link{border-radius:30px;font-size:12px;padding:10px 18px;min-height:44px;background:transparent}
+.arilia-category-heading{max-width:780px;margin:0 auto 34px!important}
+.arilia-category-heading h2{font-size:clamp(28px,3vw,42px);margin-bottom:18px}
+.arilia-category-heading p{font-size:15px;color:#6b5b5e;max-width:580px}
+.arilia-product-grid{max-width:1216px;grid-template-columns:repeat(6,minmax(0,1fr));gap:42px 28px}
+.arilia-product-grid>.arilia-product-card{grid-column:span 2}
+.arilia-product-grid:not(.arilia-grid-two)>.arilia-product-card:nth-child(4){grid-column:2 / span 2}
+.arilia-grid-two{max-width:802px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.arilia-grid-two>.arilia-product-card{grid-column:auto}
+.arilia-product-card{display:flex;flex-direction:column;align-items:stretch;text-align:left;min-width:0}
+.arilia-product-art{aspect-ratio:1/1.12;min-height:0;border-radius:7px;background:linear-gradient(150deg,#fffdf8 0%,var(--arilia-tint) 100%);border:1px solid #e9dfd4;isolation:isolate;overflow:hidden}
+.arilia-product-art:before{width:72%;height:9%;left:14%;top:auto;bottom:8%;background:#36222a;border:0;border-radius:50%;filter:blur(17px);opacity:.1}
+.arilia-product-art:after,.arilia-art-caption{display:none}
+/* A vector display mask removes the rectangular strip without repainting labels.
+   It is restricted to the supplied group artwork through the registered styles. */
+.arilia-product-art figure[class*='is-style-arilia-bottle-']{width:40%;aspect-ratio:280/610;position:relative;margin:0!important;border-radius:0;box-shadow:none;mask:url('bottle-mask.svg') center / 100% 100% no-repeat;-webkit-mask:url('bottle-mask.svg') center / 100% 100% no-repeat;overflow:hidden;z-index:2;transition:transform .25s ease}
+.arilia-product-art figure[class*='is-style-arilia-bottle-'] img{position:absolute;display:block;width:633.571429%;max-width:none;height:auto;top:-30.327869%;left:var(--arilia-offset);}
+.is-style-arilia-bottle-pomegranate{--arilia-offset:-21.428571%}
+.is-style-arilia-bottle-pomegranate-apple{--arilia-offset:-103.214286%}
+.is-style-arilia-bottle-beet-lime-ginger{--arilia-offset:-183.928571%}
+.is-style-arilia-bottle-mango{--arilia-offset:-266.071429%}
+.is-style-arilia-bottle-cranberry{--arilia-offset:-346.785714%}
+.is-style-arilia-bottle-strawberry{--arilia-offset:-428.214286%}
+.is-style-arilia-bottle-dragon-fruit{--arilia-offset:-509.285714%}
+.arilia-art--pomegranate{--arilia-tint:#f1ddd9;--arilia-accent:#74162c}
+.arilia-art--mango{--arilia-tint:#f7e7bf;--arilia-accent:#8c5527}
+.arilia-art--strawberry{--arilia-tint:#f2dfe0;--arilia-accent:#9b3851}
+.arilia-art--cranberry{--arilia-tint:#eadddf;--arilia-accent:#7f263e}
+.arilia-art--dragon-fruit{--arilia-tint:#eedfeb;--arilia-accent:#853967}
+.arilia-art--pomegranate-apple{--arilia-tint:#e7e9d8;--arilia-accent:#58633c}
+.arilia-art--beet-lime-ginger{--arilia-tint:#e9dfe5;--arilia-accent:#753e58}
+.arilia-product-card:hover figure[class*='is-style-arilia-bottle-']{transform:translateY(-3px)}
+.arilia-product-meta{font-size:10px!important;color:#7a6268;letter-spacing:1.2px;margin:22px 0 9px!important}
+.arilia-product-card h3{font-family:Georgia,'Times New Roman',serif;font-size:30px;font-weight:400;line-height:1.16;letter-spacing:-.035em;max-width:none;margin:0 0 12px!important;min-height:2.32em;display:flex;align-items:flex-start}
+.arilia-product-card>p:not(.arilia-product-meta){font-size:14px;line-height:1.7;color:#66565b;max-width:none;margin:0 0 16px!important}
+.arilia-product-card>.arilia-product-button{margin-top:auto!important;justify-content:flex-start!important;padding-top:8px}
+.arilia-product-button .wp-block-button__link{font-size:12px;line-height:1.5;border-radius:0;padding:10px 0;background:transparent;min-height:44px;border-bottom:1px solid #b19199;color:var(--arilia-ruby)}
+.arilia-product-button .wp-block-button__link:hover{color:#4b0b1b;background:transparent;border-bottom-color:#4b0b1b}
+.arilia-blends-section{background:#f3eee7;border-top:1px solid var(--arilia-line)}
+.arilia-product-detail{max-width:1312px;padding:52px 5% 64px;grid-template-columns:1fr 1fr;gap:8%;align-items:center}
+.arilia-product-detail>.arilia-product-art{aspect-ratio:1/1.12;width:100%}
+.arilia-product-detail>.arilia-product-art figure[class*='is-style-arilia-bottle-']{width:40%}
+.arilia-product-copy h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(40px,4.2vw,60px);font-weight:400;line-height:1.09;letter-spacing:-.04em;margin-bottom:22px;overflow-wrap:normal}
+.arilia-product-copy .arilia-intro{font-size:16px;max-width:470px;color:#66565b}
+.arilia-product-copy h2.arilia-product-subheading{font-size:13px;line-height:1.4;letter-spacing:.09em;margin:28px 0 10px}
+.arilia-product-copy p{font-size:14px;color:#66565b}
+.arilia-product-copy .arilia-label-note{font-size:11px;line-height:1.7;border-color:var(--arilia-line);margin-top:22px;padding-top:20px}
+.arilia-breadcrumb{font-size:12px!important;margin-bottom:27px}
+.arilia-breadcrumb a{text-underline-offset:4px}
+.arilia-bottle-point h3{font-family:Georgia,serif;font-size:27px;font-weight:400}
+.arilia-bottle-point p{font-size:14px;color:#66565b}
+/* One clear enquiry action, with quieter phone and email alternatives. */
+.arilia-connect{padding:65px 5%;background:#74162c}
+.arilia-connect h2{font-size:clamp(30px,3.7vw,49px);line-height:1.06;margin:0 auto 22px;max-width:760px}
+.arilia-connect>p{font-size:15px;max-width:600px;color:#f1dde0}
+.arilia-contact-buttons{gap:12px 22px!important;align-items:center}
+.arilia-connect .arilia-contact-buttons .wp-block-button:first-child .wp-block-button__link{background:var(--arilia-cream);color:var(--arilia-ruby);border-color:var(--arilia-cream)}
+.arilia-connect .arilia-contact-buttons .wp-block-button:not(:first-child) .wp-block-button__link{border:0;background:transparent;color:#fff8f1;padding-inline:4px;text-decoration:underline;text-underline-offset:5px;font-weight:400}
+.arilia-connect .arilia-contact-buttons .wp-block-button:first-child .wp-block-button__link:hover{background:#ead5b7;border-color:#ead5b7}
+.arilia-footer{padding:49px max(5%,calc((100% - 1216px)/2)) 25px;background:#f0eae2}
+.arilia-footer-inner{grid-template-columns:1.3fr .7fr 1fr;gap:40px}
+.arilia-footer .arilia-wordmark{font-size:42px}
+.arilia-footer p{font-size:13px;line-height:1.7}
+.arilia-footer a:hover{text-decoration:underline;text-underline-offset:4px}
+.arilia-copyright{margin-top:32px!important;padding-top:20px;color:#716068;font-size:11px!important}
+/* Tablet */
+@media(max-width:1000px){
+ .arilia-header-inner{padding-inline:5%;min-height:95px}
+ .arilia-hero-copy{padding:44px 9% 44px 10%}.arilia-hero h1{font-size:clamp(38px,5.1vw,55px)}
+ .arilia-hero-image{margin:25px 7% 25px 0!important}
+ .arilia-story-copy{padding:35px 10%}.arilia-story-copy h2{font-size:36px}
+ .arilia-product-grid{gap:34px 22px}.arilia-product-card h3{font-size:26px}
+ .arilia-product-detail{gap:6%}.arilia-product-copy h1{font-size:43px}
+}
+/* Mobile: full-width cards keep labels and flavour names readable. */
+@media(max-width:700px){
+ .arilia-announcement{font-size:9px;letter-spacing:1.4px;padding:8px 12px}
+ .arilia-header-inner{padding:17px 6%;min-height:85px}.arilia-wordmark{font-size:37px}.arilia-brand-line{font-size:7px}
+ .arilia-navigation .wp-block-navigation__container{gap:16px}
+ .arilia-hero{display:flex;flex-direction:column;align-items:stretch;min-height:0}
+ .arilia-hero-copy{padding:36px 6% 30px}.arilia-hero h1{font-size:clamp(39px,9.7vw,62px);line-height:1.05;margin-bottom:21px}
+ .arilia-hero .arilia-intro{font-size:14px;max-width:430px}.arilia-hero .arilia-eyebrow{margin-bottom:17px}
+ .arilia-main .wp-block-buttons{margin-top:22px}.arilia-hero-note{margin-top:20px!important}
+ .arilia-hero-image{height:auto;margin:0 6% 30px!important;align-self:stretch;max-width:470px;border-radius:6px}
+ .arilia-hero-image img{width:100%;height:auto;object-fit:contain}
+ .arilia-ribbon{padding:14px 6%}.arilia-ribbon p{font-size:9px;letter-spacing:1.1px;line-height:1.9}
+ .arilia-main h2{font-size:32px;line-height:1.08;letter-spacing:-.04em}
+ .arilia-section{padding:48px 6%}.arilia-centred>p{font-size:14px}
+ .arilia-lineup{margin:25px auto!important;border-radius:5px}
+ .arilia-story{display:flex;flex-direction:column}.arilia-story-image{height:auto;min-height:0;width:100%}
+ .arilia-story-copy{padding:35px 6% 40px}.arilia-story-copy h2{font-size:36px;max-width:420px}
+ .arilia-story-copy p{font-size:14px}
+ .arilia-products-hero{padding:36px 6%}.arilia-products-hero h1{font-size:clamp(33px,8.4vw,48px);line-height:1.06;overflow-wrap:normal}
+ .arilia-products-hero>p:last-child{font-size:14px}
+ .arilia-jump{padding:14px 6%;gap:10px;justify-content:flex-start;flex-wrap:wrap}.arilia-jump .arilia-eyebrow{width:auto;font-size:9px!important}
+ .arilia-jump .wp-block-buttons{margin:0;gap:8px!important}.arilia-jump-buttons .wp-block-button__link{font-size:11px;padding:10px 13px}
+ .arilia-category-heading{text-align:left;margin-bottom:27px!important}.arilia-category-heading h2{font-size:29px}.arilia-category-heading p{font-size:14px}
+ .arilia-product-grid,.arilia-grid-two{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 18px}
+ .arilia-product-grid>.arilia-product-card,.arilia-product-grid:not(.arilia-grid-two)>.arilia-product-card:nth-child(4){grid-column:auto}
+ .arilia-product-art{border-radius:6px;aspect-ratio:1/1.2}
+ .arilia-product-art figure[class*='is-style-arilia-bottle-']{width:44%;border-radius:0}
+ .arilia-product-card h3{font-size:24px;min-height:2.32em;line-height:1.16}
+ .arilia-product-meta{font-size:8px!important;letter-spacing:.7px;margin:17px 0 9px!important}
+ .arilia-product-card>p:not(.arilia-product-meta){font-size:12px;line-height:1.65}
+ .arilia-product-button .wp-block-button__link{font-size:11px;line-height:1.5;padding:10px 0;text-align:left;justify-content:flex-start}
+ .arilia-product-detail{display:flex;flex-direction:column;gap:32px;padding:30px 6% 44px}
+ .arilia-product-detail>.arilia-product-art{max-width:430px;aspect-ratio:1/1.05}
+ .arilia-product-detail>.arilia-product-art figure[class*='is-style-arilia-bottle-']{width:38%}
+ .arilia-product-copy{width:100%}.arilia-product-copy h1{font-size:42px}.arilia-product-copy .arilia-intro{font-size:15px}
+ .arilia-bottle-points{grid-template-columns:1fr;gap:25px}.arilia-bottle-point h3{font-size:26px}
+ .arilia-connect{padding:45px 6%}.arilia-connect h2{font-size:34px}.arilia-connect>p{font-size:14px}
+ .arilia-contact-buttons{flex-direction:column;gap:4px!important;align-items:center}
+ .arilia-contact-buttons .wp-block-button__link{font-size:12px;padding:13px 18px;overflow-wrap:anywhere}
+ .arilia-footer{padding:36px 6% 22px}.arilia-footer-inner{grid-template-columns:1fr;gap:23px}.arilia-footer-contact{grid-column:auto}
+}
+@media(max-width:430px){
+ .arilia-product-grid,.arilia-grid-two{grid-template-columns:1fr;gap:34px;max-width:360px}
+ .arilia-product-art{aspect-ratio:1/1.08}
+ .arilia-product-art figure[class*='is-style-arilia-bottle-']{width:39%}
+ .arilia-product-card h3{font-size:29px;min-height:0;margin-bottom:10px!important}
+ .arilia-product-meta{font-size:9px!important;letter-spacing:1px}
+ .arilia-product-card>p:not(.arilia-product-meta){font-size:14px}
+ .arilia-product-button .wp-block-button__link{font-size:12px}
+ .arilia-product-copy h1{font-size:38px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}a,.arilia-product-art figure[class*='is-style-arilia-bottle-']{transition:none;transform:none!important}}
+
+/* Final hierarchy and narrow-screen safeguards. */
+.arilia-footer p.arilia-wordmark{font:700 42px/1 Georgia,serif;letter-spacing:-2px}
+.arilia-main .arilia-hero-copy{padding-left:10%}
+.arilia-main .arilia-product-card h3{min-height:2.32em}
+.arilia-main .arilia-product-card>.arilia-product-button{margin-top:auto!important}
+.arilia-main .arilia-hero h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.045em;font-size:clamp(38px,4.7vw,66px);line-height:1.08}
+.arilia-main .arilia-hero h1 em{color:#98603d}
+.arilia-hero-image{max-width:520px}
+.arilia-main .arilia-product-art{flex-shrink:0}
+@media(max-width:700px){
+ .arilia-main .arilia-hero-copy{padding-left:6%}
+ .arilia-main .arilia-hero h1{font-size:clamp(36px,9vw,56px)}
+ .arilia-product-grid>.arilia-product-card,.arilia-product-grid:not(.arilia-grid-two)>.arilia-product-card:nth-child(4){grid-column:auto}
+ .arilia-story-copy h2 br{display:none}
+}
+@media(max-width:430px){.arilia-main .arilia-product-card h3{min-height:0}}
+
+/* 1.2: restore the expressive Arilia colour and arch language. */
+:root{--arilia-ruby:#8c1028;--arilia-cream:#fffaf2;--arilia-gold:#ffce76}
+.arilia-announcement,.arilia-connect{background:var(--arilia-ruby)}
+.arilia-hero{background:var(--arilia-ruby);max-width:none;align-items:center}
+.arilia-main .arilia-hero h1{font-family:Arial,Helvetica,sans-serif;font-weight:800;color:var(--arilia-cream);letter-spacing:-.045em}
+.arilia-main .arilia-hero h1 em{color:var(--arilia-gold)}
+.arilia-hero .arilia-eyebrow,.arilia-hero .arilia-intro{color:var(--arilia-cream)}
+.arilia-hero-note{color:#f6dadf}
+.arilia-hero .wp-block-button__link{background:var(--arilia-cream);color:var(--arilia-ruby);border-radius:40px}
+.arilia-hero .wp-block-button__link:hover{background:var(--arilia-gold);color:var(--arilia-ruby)}
+.arilia-hero-image{border-radius:48% 48% 0 0;max-width:560px;margin:32px 7% 0 0!important;align-self:end;background:#eee4d6}
+.arilia-hero-image img{width:100%;height:auto;object-fit:contain}
+.arilia-ribbon{background:var(--arilia-gold);border:0}
+.arilia-story{background:var(--arilia-gold);max-width:none}
+.arilia-products-hero{background:#f3e4d8}
+.arilia-products-hero:after{display:block}
+.arilia-product-art{border-radius:48% 48% 8px 8px;background:var(--arilia-tint);border:0}
+.arilia-product-art:before{width:110%;height:110%;left:-42%;top:32%;bottom:auto;background:transparent;border:1px solid var(--arilia-accent);border-radius:50%;filter:none;opacity:.22}
+.arilia-product-art:after{display:block;opacity:.26}
+.arilia-art--pomegranate{--arilia-tint:#f2d5d9;--arilia-accent:#9d1232}
+.arilia-art--mango{--arilia-tint:#ffe2a1;--arilia-accent:#98601a}
+.arilia-art--strawberry{--arilia-tint:#f5dce1;--arilia-accent:#a52d47}
+.arilia-art--cranberry{--arilia-tint:#ead4da;--arilia-accent:#8c1837}
+.arilia-art--dragon-fruit{--arilia-tint:#efd2e7;--arilia-accent:#992f7b}
+.arilia-art--pomegranate-apple{--arilia-tint:#e6e8c8;--arilia-accent:#526536}
+.arilia-art--beet-lime-ginger{--arilia-tint:#e3d5e1;--arilia-accent:#75395c}
+.arilia-main .arilia-product-card h3{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:26px}
+.arilia-connect .wp-block-button__link{border-radius:40px}
+@media(max-width:700px){
+ .arilia-hero-image{margin:0 6% 0!important;align-self:center;width:88%;max-width:470px;border-radius:48% 48% 0 0}
+ .arilia-main .arilia-product-card h3{font-size:24px}
+}
+
+/* 1.3: reference navigation with a dedicated stockist enquiry action. */
+.arilia-navigation{font-size:14px;font-weight:600}
+.arilia-navigation .wp-block-navigation__container{gap:28px;align-items:center}
+.arilia-navigation .wp-block-navigation-item__content{position:relative;text-decoration:none;padding:12px 0}
+.arilia-navigation .wp-block-navigation-item.current-menu-item:not(.arilia-stock-link) .wp-block-navigation-item__content{text-decoration:none}
+.arilia-navigation .wp-block-navigation-item.current-menu-item:not(.arilia-stock-link) .wp-block-navigation-item__content:after{content:'';position:absolute;bottom:4px;left:0;width:16px;height:2px;background:#b10f30}
+.arilia-navigation .arilia-stock-link .wp-block-navigation-item__content{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 22px;border-radius:999px;background:#b10f30;color:#fff;font-weight:700;text-decoration:none}
+.arilia-navigation .arilia-stock-link .wp-block-navigation-item__content:hover{background:#8c1028;color:#fff;text-decoration:none}
+@media(max-width:800px) and (min-width:601px){.arilia-navigation .wp-block-navigation__container{gap:18px}.arilia-navigation{font-size:13px}.arilia-navigation .arilia-stock-link .wp-block-navigation-item__content{padding-inline:17px}}
+@media(max-width:600px){.arilia-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container{align-items:flex-start;gap:16px}.arilia-navigation .arilia-stock-link{margin-top:8px}}
+
+/* 1.4: full-frame posters and a readable editorial story page. */
+.arilia-brand-line{font-size:10px;letter-spacing:1.25px;text-transform:none;white-space:nowrap}
+.arilia-main .arilia-hero-image,.arilia-main .arilia-story-image{min-height:0;height:auto}
+.arilia-main .arilia-hero-image img,.arilia-main .arilia-story-image img,.arilia-main .arilia-lineup img,
+.arilia-main .arilia-poster img{display:block;width:100%;height:auto;max-height:calc(100vh - 100px);max-height:calc(100svh - 100px);object-fit:contain;object-position:center}
+.arilia-main .arilia-hero-image{width:min(86%,560px);justify-self:center}
+.arilia-main .arilia-lineup{background:#fffaf2}
+.arilia-story-page .arilia-products-hero{padding:48px max(6%,calc((100% - 1160px)/2));text-align:left}
+.arilia-story-page .arilia-products-hero h1{font-size:clamp(34px,4.3vw,60px);line-height:1.12;max-width:850px;margin-bottom:20px}
+.arilia-story-page .arilia-products-hero h1 br,.arilia-story-page .arilia-story-copy h2 br{display:none}
+.arilia-story-page .arilia-products-hero>p:last-child{max-width:62ch;line-height:1.8}
+.arilia-story-page .arilia-story{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;gap:clamp(28px,5vw,72px);padding:48px max(6%,calc((100% - 1160px)/2));background:#fffaf2}
+.arilia-story-page .arilia-story-image{width:100%;margin:0!important;background:#f3e4d8;border-radius:48% 48% 8px 8px;overflow:hidden}
+.arilia-story-page .arilia-story-image img{max-height: min(620px,calc(100svh - 100px))}
+.arilia-story-page .arilia-story-copy{padding:0;max-width:540px}
+.arilia-story-page .arilia-story-copy h2{font-size:clamp(28px,3.1vw,44px);line-height:1.16;margin-bottom:24px;max-width:16ch}
+.arilia-story-page .arilia-story-copy p{font-size:16px;line-height:1.85;max-width:55ch;margin:0 0 20px}
+.arilia-story-page .arilia-bottle-points{gap:32px}
+.arilia-story-page .arilia-bottle-point{padding-top:24px}
+.arilia-story-page .arilia-bottle-point h3{font-size:24px;line-height:1.3;margin-bottom:14px}
+.arilia-story-page .arilia-bottle-point p{line-height:1.8;max-width:36ch}
+@media(max-width:700px){
+ .arilia-story-page .arilia-products-hero{padding:34px 6%}
+ .arilia-story-page .arilia-story{grid-template-columns:1fr;gap:30px;padding:30px 6% 40px}
+ .arilia-story-page .arilia-story-image{width:100%;max-width:400px;justify-self:center}
+ .arilia-story-page .arilia-story-copy{max-width:none}
+ .arilia-story-page .arilia-story-copy h2{max-width:21ch}
+ .arilia-story-page .arilia-bottle-points{grid-template-columns:1fr;gap:24px}
+ .arilia-main .arilia-hero-image{width:88%}
+ .arilia-brand-line{font-size:9px;letter-spacing:1px}
+}
+
+/* 1.5: supplied embossed logo, including its original background and tagline. */
+.arilia-logo-link{display:block;width:200px;max-width:100%;line-height:0;border-radius:3px;overflow:hidden}
+.arilia-logo-image{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain}
+.arilia-header-inner{padding-top:10px;padding-bottom:10px;gap:24px}
+.arilia-footer .arilia-logo-link{width:210px}
+.arilia-brand-line{display:none}
+@media(max-width:800px){.arilia-logo-link{width:165px}.arilia-navigation .wp-block-navigation__container{gap:16px}}
+@media(max-width:600px){.arilia-logo-link{width:150px}.arilia-header-inner{padding-top:8px;padding-bottom:8px}.arilia-footer .arilia-logo-link{width:190px}}
+
+/* 1.6: updated transparent logo; preserve source proportions. */
+.arilia-logo-image{aspect-ratio:auto}
+
+/* 1.7: balanced composition; existing section backgrounds and logo retained. */
+.arilia-main .arilia-hero{
+ grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+ gap:clamp(32px,5vw,80px);
+ padding:32px max(6%,calc((100% - 1240px)/2)) 0;
+ align-items:center;position:relative;
+}
+.arilia-main .arilia-hero-copy{padding:38px 0 48px;max-width:600px;min-width:0}
+.arilia-main .arilia-hero h1{font-size:clamp(42px,4.7vw,76px);line-height:1.04;letter-spacing:-.045em;margin-bottom:26px}
+.arilia-hero .arilia-intro{font-size:16px;line-height:1.8;max-width:43ch}
+.arilia-hero .arilia-eyebrow{letter-spacing:2.4px;margin-bottom:24px}
+.arilia-main .arilia-hero-image{width:100%;max-width:500px;margin:0!important;justify-self:end;align-self:end;box-shadow:0 0 0 1px rgba(255,232,193,.3),0 22px 50px rgba(41,4,14,.24)}
+.arilia-main .arilia-hero-image img{max-height:min(680px,calc(100svh - 180px));width:100%;height:auto;object-fit:contain}
+.arilia-hero .wp-block-button__link{box-shadow:0 6px 18px rgba(36,5,12,.16);padding:16px 26px;transition:box-shadow .2s ease,transform .2s ease,background-color .2s ease}
+.arilia-hero .wp-block-button__link:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(36,5,12,.22)}
+.arilia-main .arilia-section h2,.arilia-main .arilia-category-heading h2,.arilia-main .arilia-story-copy h2,.arilia-main .arilia-products-hero h1{color:#302b28}
+.arilia-main .arilia-section>.arilia-eyebrow,.arilia-main .arilia-category-heading>.arilia-eyebrow,.arilia-main .arilia-story-copy>.arilia-eyebrow{color:#46604a}
+.arilia-main .arilia-product-card h3{color:#302b28}
+.arilia-main .arilia-bottle-point h3{color:#364d3e}
+.arilia-main .arilia-product-art{box-shadow:0 10px 25px rgba(57,38,26,.07);border:1px solid rgba(92,63,41,.08)}
+.arilia-main .arilia-lineup{box-shadow:0 12px 32px rgba(57,38,26,.08)}
+.arilia-header-inner{max-width:1390px}
+.arilia-navigation .wp-block-navigation-item__content{color:#302b28}
+.arilia-navigation .arilia-stock-link .wp-block-navigation-item__content{color:#fff}
+@media(max-width:900px){
+ .arilia-main .arilia-hero{gap:30px;padding-inline:6%}
+ .arilia-main .arilia-hero h1{font-size:clamp(38px,5.5vw,54px)}
+ .arilia-hero .arilia-intro{font-size:14px}
+}
+@media(max-width:700px){
+ .arilia-main .arilia-hero{display:flex;flex-direction:column;align-items:stretch;padding:32px 6% 0;gap:26px}
+ .arilia-main .arilia-hero-copy{padding:0;max-width:540px}
+ .arilia-main .arilia-hero h1{font-size:clamp(38px,9.2vw,62px)}
+ .arilia-main .arilia-hero-image{width:100%;max-width:400px;align-self:center}
+ .arilia-main .arilia-hero-image img{max-height:calc(100svh - 110px)}
+ .arilia-hero-note{margin-bottom:0}
+}
+@media(prefers-reduced-motion:reduce){.arilia-hero .wp-block-button__link{transition:none;transform:none!important}}
+
+/* 1.10: approved landscape posters, shown in full at every width. */
+.arilia-main .arilia-campaign-poster{width:100%;max-width:none;margin:0;padding:0;background:#faf2e5;line-height:0}
+.arilia-campaign-poster>a{display:block;line-height:0}
+.arilia-campaign-poster img{display:block;width:100%;height:auto;max-height:calc(100svh - 100px);object-fit:contain;margin:0;border-radius:0}
+.arilia-campaign-poster a:focus-visible{outline:3px solid #7c152c;outline-offset:-4px}
+
+/* 1.12: compact header so the hero and flavours posters fit on the first screen. */
+.arilia-announcement{display:none}
+.arilia-header-inner{min-height:0;padding:6px 5%;gap:20px}
+.arilia-logo-link{width:118px;border-radius:0}
+.arilia-footer .arilia-logo-link{width:150px}
+.arilia-navigation .arilia-stock-link .wp-block-navigation-item__content{min-height:40px;padding:9px 18px}
+.arilia-campaign-poster img,.arilia-main .arilia-hero-image img,.arilia-main .arilia-story-image img,.arilia-main .arilia-lineup img,.arilia-main .arilia-poster img{max-height:calc(100vh - 92px);max-height:calc(100svh - 92px)}
+html{scroll-padding-top:12px}
+@media(max-width:800px){.arilia-logo-link{width:104px}.arilia-header-inner{min-height:0;padding:6px 5%}}
+@media(max-width:600px){.arilia-logo-link{width:96px}.arilia-header-inner{min-height:0;padding:5px 6%}.arilia-footer .arilia-logo-link{width:140px}}

@@ -1,5 +1,11 @@
 # Changelog
 
+## Live 1.x line — 1.12.0 — 2026-10-21
+
+- Compact header: announcement strip hidden, logo 118px (96px on phones), tighter padding. Header height 187px → 92px on desktop, 147px → 75px on phones, so the home hero poster and the Flavours poster fit on the first screen (verified at 1366×700, 1440×820, 390×740).
+- Posters and hero/story/lineup images use `max-height: calc(100svh - 92px)`.
+- Footer logo 150px. Everything else unchanged from 1.11.
+
 ## 2.0.2 — 2026-10-21
 
 - Stylesheet now also styles pages that still hold 1.x content (hero arch, ribbon, story, connect band), so the poster hero shows before "Upgrade page layouts" is run.

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.6/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {"contentSize": "760px", "wideSize": "1280px"},
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        {"slug":"ruby","name":"Arilia Ruby","color":"#8c1028"},
+        {"slug":"cream","name":"Warm Ivory","color":"#fffaf2"},
+        {"slug":"ink","name":"Fruit Ink","color":"#341b22"},
+        {"slug":"gold","name":"Mango Gold","color":"#ffce76"},
+        {"slug":"green","name":"Botanical Green","color":"#344c3a"},
+        {"slug":"rose","name":"Soft Rose","color":"#f2d5d9"}
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        {"slug":"body","name":"Clean Sans","fontFamily":"Arial, Helvetica, sans-serif"},
+        {"slug":"display","name":"Bold Display","fontFamily":"Impact, 'Arial Narrow', Arial, sans-serif"},
+        {"slug":"serif","name":"Brand Serif","fontFamily":"Georgia, 'Times New Roman', serif"}
+      ],
+      "fontSizes": [
+        {"slug":"small","name":"Small","size":"0.875rem"},
+        {"slug":"medium","name":"Body","size":"1rem"},
+        {"slug":"large","name":"Large","size":"1.5rem"},
+        {"slug":"x-large","name":"Display","size":"3rem"},
+        {"slug":"hero","name":"Hero","size":"6rem","fluid":{"min":"3.1rem","max":"6rem"}}
+      ]
+    },
+    "spacing": {"units":["px","rem","%","vw"],"blockGap":true}
+  },
+  "styles": {
+    "color":{"background":"var:preset|color|cream","text":"var:preset|color|ink"},
+    "typography":{"fontFamily":"var:preset|font-family|body","fontSize":"1rem","lineHeight":"1.7"},
+    "spacing":{"blockGap":"1.25rem"},
+    "elements": {
+      "link":{"color":{"text":"var:preset|color|ruby"}},
+      "heading":{"typography":{"fontFamily":"var:preset|font-family|display","fontWeight":"700","lineHeight":"1.02","letterSpacing":"-0.035em"},"color":{"text":"var:preset|color|ruby"}},
+      "button":{"color":{"background":"var:preset|color|ruby","text":"var:preset|color|cream"},"border":{"radius":"40px"},"typography":{"fontSize":"0.875rem","fontWeight":"700"},"spacing":{"padding":{"top":"16px","bottom":"16px","left":"24px","right":"24px"}}}
+    }
+  },
+  "customTemplates": [
+    {"name":"brand-page","title":"Arilia Brand Page (no automatic page title)","postTypes":["page"]}
+  ],
+  "templateParts": [
+    {"name":"header","title":"Arilia Header","area":"header"},
+    {"name":"footer","title":"Arilia Footer","area":"footer"}
+  ]
+}
