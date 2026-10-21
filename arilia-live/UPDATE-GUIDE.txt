@@ -106,3 +106,9 @@ used on every page, including the footer logo at 150px.
 Saved headers customised in the Site Editor keep their own content, but the
 new sizing still applies because it is CSS. Upload replacement, confirm
 version 1.12.0, then clear the GoDaddy page cache.
+
+1.13 HOMEPAGE STRIP
+The "Meet the Arilia 250 ml collection" strip is shown again, on the
+homepage only (29px tall). Inner pages keep the compact 92px header so the
+Flavours poster still fits the first screen. The logo row (logo, menu,
+Stock Arilia) is the same height and alignment on every page.

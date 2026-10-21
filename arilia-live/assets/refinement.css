@@ -340,3 +340,8 @@ a:focus-visible,button:focus-visible{outline:3px solid #246157;outline-offset:5p
 html{scroll-padding-top:12px}
 @media(max-width:800px){.arilia-logo-link{width:104px}.arilia-header-inner{min-height:0;padding:6px 5%}}
 @media(max-width:600px){.arilia-logo-link{width:96px}.arilia-header-inner{min-height:0;padding:5px 6%}.arilia-footer .arilia-logo-link{width:140px}}
+
+/* 1.13: keep the ruby announcement strip on the homepage only; the logo row stays identical on every page. */
+body.home .arilia-announcement,body.blog.arilia-front .arilia-announcement{display:block;padding:7px 20px;font-size:10px;line-height:1.5;letter-spacing:1.6px}
+.arilia-header-inner{min-height:80px;align-items:center}
+.arilia-logo-link{display:flex;align-items:center}

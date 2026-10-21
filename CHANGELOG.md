@@ -1,5 +1,9 @@
 # Changelog
 
+## Live 1.x line — 1.13.0 — 2026-10-21
+
+- The ruby "Meet the Arilia 250 ml collection" strip is shown again on the homepage only (29px). Inner pages keep the 92px header. The logo row has a fixed 80px minimum height so logo, menu and Stock Arilia align identically on every page. Home poster still fits at 1366×700 (bottom edge 667px).
+
 ## Live 1.x line — 1.12.0 — 2026-10-21
 
 - Compact header: announcement strip hidden, logo 118px (96px on phones), tighter padding. Header height 187px → 92px on desktop, 147px → 75px on phones, so the home hero poster and the Flavours poster fit on the first screen (verified at 1366×700, 1440×820, 390×740).
