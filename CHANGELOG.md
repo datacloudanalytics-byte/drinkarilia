@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1 — 2026-10-21
+
+- Home hero restyled as the ruby poster: full-bleed background, bold white uppercase headline with gold accent, bottle in a tall arch, gold flavour ribbon.
+
 ## 2.0.0 — 2026-10-21
 
 Full rebuild of the Arilia theme. See `docs/AUDIT-REPORT.md` for the audit that motivated it.

@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ARILIA_CONTENT_VERSION', '2.0.0' );
+define( 'ARILIA_CONTENT_VERSION', '2.0.1' );
 
 function arilia_setup_menu() {
 	add_theme_page( 'Arilia Setup', 'Arilia Setup', 'manage_options', 'arilia-setup', 'arilia_setup_screen' );

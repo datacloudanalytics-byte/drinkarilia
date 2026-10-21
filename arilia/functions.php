@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ARILIA_VERSION', '2.0.0' );
+define( 'ARILIA_VERSION', '2.0.1' );
 define( 'ARILIA_DIR', get_theme_file_path() );
 define( 'ARILIA_URI', get_theme_file_uri() );
 

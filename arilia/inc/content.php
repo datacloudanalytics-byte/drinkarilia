@@ -183,17 +183,11 @@ function arilia_page_content( $slug ) {
 	if ( 'home' === $slug ) {
 		$hero = arilia_group(
 			arilia_group(
-				arilia_p( 'Pure fruit wellness · 250 ml', 'arilia-eyebrow' ) .
-				arilia_h( 'A little bottle.<br><em>A world of flavour.</em>', 1 ) .
-				arilia_p( 'Meet Arilia: seven bright fruit flavours in our signature 250 ml double-bulb bottle. From ruby-red pomegranate to golden mango, every sip has a colour of its own.', 'arilia-lead' ) .
-				arilia_buttons(
-					array(
-						array( 'Explore the flavours', arilia_url( 'products' ) ),
-						array( 'Stock Arilia', arilia_url( 'contact' ), 'outline' ),
-					),
-					'arilia-hero__buttons'
-				) .
-				arilia_p( 'Seven flavours · 250 ml · Best served chilled', 'arilia-hero__meta' ),
+				arilia_p( 'Fruit for the spotlight.', 'arilia-eyebrow' ) .
+				arilia_h( 'Small bottle.<br>Big fruit<br><em>energy.</em>', 1 ) .
+				arilia_p( 'From ruby-red pomegranate to golden mango. Meet a colourful collection with a character all its own.', 'arilia-lead' ) .
+				arilia_buttons( array( array( 'Explore the collection', arilia_url( 'products' ) ) ), 'arilia-hero__buttons' ) .
+				arilia_p( '250 ml · Our signature double-bulb bottle', 'arilia-hero__meta' ),
 				'arilia-hero__copy'
 			) .
 			arilia_group( arilia_img( 'pomegranate.webp', 'Arilia Pomegranate Juice in the signature 250 ml double-bulb bottle', 'arilia-hero__image', 1000, 1500 ), 'arilia-hero__art' ),
