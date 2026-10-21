@@ -3,6 +3,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 require_once get_theme_file_path( 'inc/content.php' );
 require_once get_theme_file_path( 'inc/setup.php' );
+require_once get_theme_file_path( 'inc/audience.php' );
 
 function arilia_theme_setup() {
     add_theme_support( 'title-tag' );

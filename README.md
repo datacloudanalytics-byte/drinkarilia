@@ -1,6 +1,6 @@
 # Arilia WordPress theme (drinkarilia.com)
 
-> **Two theme lines live here.** `arilia-live/` is the 1.x theme that currently runs on drinkarilia.com (poster artwork, embossed logo); its latest build is [`dist/Arilia-WordPress-Theme-1.13.zip`](dist/Arilia-WordPress-Theme-1.13.zip) and it can be uploaded over the installed 1.11 as a drop-in replacement. `arilia/` is the 2.0 rebuild described below, delivered as `dist/Arilia-WordPress-Theme.zip`.
+> **Two theme lines live here.** `arilia-live/` is the 1.x theme that currently runs on drinkarilia.com (poster artwork, embossed logo); its latest build is [`dist/Arilia-WordPress-Theme-1.14.zip`](dist/Arilia-WordPress-Theme-1.14.zip) and it can be uploaded over the installed 1.11 as a drop-in replacement. `arilia/` is the 2.0 rebuild described below, delivered as `dist/Arilia-WordPress-Theme.zip`.
 
 A bright, fruit-forward block theme for Arilia, the 250 ml pure fruit wellness collection. Version 2.0.0 is a full rebuild of the delivered 1.2 package: one design system, seven flavour pages, a plugin-free enquiry form, Media Library artwork, SEO output and a guided setup screen.
 

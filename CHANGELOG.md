@@ -1,5 +1,9 @@
 # Changelog
 
+## Live 1.x line — 1.14.0 — 2026-10-21
+
+- New homepage section directly below the hero poster: white benefits strip (four icons) and "A flavour for every age and every lifestyle" with five audience cards (women, men, kids, daily energy, seniors), bottle thumbnails linked to flavour pages, closing line, two buttons and the wellness disclaimer. Injected at render time on saved homepages; editable core blocks on new imports. Copy in `arilia-live/inc/audience.php`.
+
 ## Live 1.x line — 1.13.0 — 2026-10-21
 
 - The ruby "Meet the Arilia 250 ml collection" strip is shown again on the homepage only (29px). Inner pages keep the 92px header. The logo row has a fixed 80px minimum height so logo, menu and Stock Arilia align identically on every page. Home poster still fits at 1366×700 (bottom edge 667px).

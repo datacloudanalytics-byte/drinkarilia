@@ -112,3 +112,15 @@ The "Meet the Arilia 250 ml collection" strip is shown again, on the
 homepage only (29px tall). Inner pages keep the compact 92px header so the
 Flavours poster still fits the first screen. The logo row (logo, menu,
 Stock Arilia) is the same height and alignment on every page.
+
+1.14 "A FLAVOUR FOR EVERY AGE" SECTION
+Directly below the homepage hero poster: a white benefits strip
+(antioxidant-rich fruit, natural vitamins, refreshing hydration, a flavour
+for every age) and five audience cards (women's wellness, men's active
+lifestyle, growing kids, daily energy and vitality, seniors), each listing
+recommended flavours with bottle thumbnails linked to the flavour pages,
+followed by a closing line, two buttons and the wellness disclaimer.
+Existing saved homepages receive the section automatically at render time;
+new starter imports include it as editable core blocks. Copy lives in
+inc/audience.php. The wording contains wellness claims supplied by Arilia;
+have it reviewed for compliance before public promotion.
