@@ -1,0 +1,116 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.6/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "useRootPaddingAwareAlignments": true,
+    "layout": { "contentSize": "72rem", "wideSize": "84rem" },
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "palette": [
+        { "slug": "ruby", "name": "Arilia Ruby", "color": "#a4122e" },
+        { "slug": "ruby-deep", "name": "Deep Ruby", "color": "#7a0f22" },
+        { "slug": "ink", "name": "Fruit Ink", "color": "#2b1a1f" },
+        { "slug": "muted", "name": "Muted Plum", "color": "#6b5a5f" },
+        { "slug": "cream", "name": "Cream", "color": "#fffcf7" },
+        { "slug": "sand", "name": "Warm Sand", "color": "#f6eee3" },
+        { "slug": "white", "name": "White", "color": "#ffffff" },
+        { "slug": "gold", "name": "Mango Gold", "color": "#f4b942" },
+        { "slug": "gold-soft", "name": "Soft Gold", "color": "#ffe8b8" },
+        { "slug": "leaf", "name": "Leaf Green", "color": "#2f7a4d" },
+        { "slug": "line", "name": "Hairline", "color": "#eadfd4" },
+        { "slug": "tint-pomegranate", "name": "Pomegranate Tint", "color": "#fbe3e6" },
+        { "slug": "tint-mango", "name": "Mango Tint", "color": "#fff0c7" },
+        { "slug": "tint-strawberry", "name": "Strawberry Tint", "color": "#ffe4ea" },
+        { "slug": "tint-cranberry", "name": "Cranberry Tint", "color": "#f6dde4" },
+        { "slug": "tint-dragon-fruit", "name": "Dragon Fruit Tint", "color": "#f9ddee" },
+        { "slug": "tint-pomegranate-apple", "name": "Pomegranate + Apple Tint", "color": "#fbe6de" },
+        { "slug": "tint-beet-lime-ginger", "name": "Beet + Lime + Ginger Tint", "color": "#f1e0ec" }
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "writingMode": false,
+      "fontFamilies": [
+        {
+          "slug": "body",
+          "name": "Manrope",
+          "fontFamily": "Manrope, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+          "fontFace": [
+            { "fontFamily": "Manrope", "fontStyle": "normal", "fontWeight": "200 800", "fontDisplay": "swap", "src": [ "file:./assets/fonts/manrope-latin.woff2" ] }
+          ]
+        },
+        {
+          "slug": "display",
+          "name": "Fraunces",
+          "fontFamily": "Fraunces, 'Iowan Old Style', 'Palatino Linotype', Georgia, serif",
+          "fontFace": [
+            { "fontFamily": "Fraunces", "fontStyle": "normal", "fontWeight": "300 900", "fontDisplay": "swap", "src": [ "file:./assets/fonts/fraunces-latin.woff2" ] },
+            { "fontFamily": "Fraunces", "fontStyle": "italic", "fontWeight": "300 900", "fontDisplay": "swap", "src": [ "file:./assets/fonts/fraunces-italic-latin.woff2" ] }
+          ]
+        }
+      ],
+      "fontSizes": [
+        { "slug": "x-small", "name": "Extra small", "size": "0.8125rem", "fluid": false },
+        { "slug": "small", "name": "Small", "size": "0.9375rem", "fluid": false },
+        { "slug": "medium", "name": "Body", "size": "1.0625rem", "fluid": false },
+        { "slug": "large", "name": "Large", "size": "1.375rem", "fluid": { "min": "1.2rem", "max": "1.375rem" } },
+        { "slug": "x-large", "name": "Heading", "size": "2.5rem", "fluid": { "min": "1.9rem", "max": "2.5rem" } },
+        { "slug": "xx-large", "name": "Display", "size": "3.5rem", "fluid": { "min": "2.4rem", "max": "3.5rem" } },
+        { "slug": "hero", "name": "Hero", "size": "4.75rem", "fluid": { "min": "2.75rem", "max": "4.75rem" } }
+      ]
+    },
+    "spacing": {
+      "units": [ "px", "rem", "%", "vw", "vh" ],
+      "blockGap": true,
+      "padding": true,
+      "margin": true,
+      "spacingSizes": [
+        { "slug": "10", "name": "1", "size": "0.5rem" },
+        { "slug": "20", "name": "2", "size": "1rem" },
+        { "slug": "30", "name": "3", "size": "1.5rem" },
+        { "slug": "40", "name": "4", "size": "2.5rem" },
+        { "slug": "50", "name": "5", "size": "4rem" },
+        { "slug": "60", "name": "6", "size": "clamp(4rem, 8vw, 7rem)" }
+      ]
+    },
+    "shadow": {
+      "presets": [
+        { "slug": "card", "name": "Card", "shadow": "0 18px 40px -24px rgba(43, 26, 31, 0.35)" }
+      ]
+    }
+  },
+  "styles": {
+    "color": { "background": "var:preset|color|cream", "text": "var:preset|color|ink" },
+    "typography": { "fontFamily": "var:preset|font-family|body", "fontSize": "var:preset|font-size|medium", "lineHeight": "1.65" },
+    "spacing": { "blockGap": "1.25rem", "padding": { "top": "0", "right": "0", "bottom": "0", "left": "0" } },
+    "elements": {
+      "link": { "color": { "text": "var:preset|color|ruby" }, ":hover": { "color": { "text": "var:preset|color|ruby-deep" } } },
+      "heading": { "typography": { "fontFamily": "var:preset|font-family|display", "fontWeight": "600", "lineHeight": "1.05", "letterSpacing": "-0.02em" }, "color": { "text": "var:preset|color|ruby-deep" } },
+      "h1": { "typography": { "fontSize": "var:preset|font-size|hero" } },
+      "h2": { "typography": { "fontSize": "var:preset|font-size|xx-large" } },
+      "h3": { "typography": { "fontSize": "var:preset|font-size|x-large", "fontWeight": "600" } },
+      "h4": { "typography": { "fontSize": "var:preset|font-size|large" } },
+      "button": {
+        "color": { "background": "var:preset|color|ruby", "text": "var:preset|color|white" },
+        "border": { "radius": "999px", "width": "0" },
+        "typography": { "fontSize": "var:preset|font-size|small", "fontWeight": "700", "fontFamily": "var:preset|font-family|body" },
+        "spacing": { "padding": { "top": "0.9rem", "bottom": "0.9rem", "left": "1.5rem", "right": "1.5rem" } },
+        ":hover": { "color": { "background": "var:preset|color|ruby-deep", "text": "var:preset|color|white" } }
+      }
+    },
+    "blocks": {
+      "core/site-title": { "typography": { "fontFamily": "var:preset|font-family|display", "fontWeight": "700" } },
+      "core/post-title": { "typography": { "fontFamily": "var:preset|font-family|display" } },
+      "core/details": { "border": { "top": { "color": "var:preset|color|line", "width": "1px", "style": "solid" } }, "spacing": { "padding": { "top": "1rem", "bottom": "1rem" } } }
+    }
+  },
+  "customTemplates": [
+    { "name": "brand-page", "title": "Arilia Brand Page (full width, no automatic title)", "postTypes": [ "page" ] }
+  ],
+  "templateParts": [
+    { "name": "header", "title": "Arilia Header", "area": "header" },
+    { "name": "footer", "title": "Arilia Footer", "area": "footer" }
+  ]
+}

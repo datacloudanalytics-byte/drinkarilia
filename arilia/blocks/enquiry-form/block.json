@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "arilia/enquiry-form",
+  "title": "Arilia Enquiry Form",
+  "category": "widgets",
+  "icon": "email-alt",
+  "description": "A trade and customer enquiry form that emails the Arilia contact address. No plugin and no database storage.",
+  "textdomain": "arilia",
+  "keywords": [ "contact", "form", "enquiry", "arilia" ],
+  "attributes": {
+    "heading": { "type": "string", "default": "" }
+  },
+  "supports": { "html": false, "multiple": false, "align": false },
+  "editorScript": "file:./editor.js",
+  "render": "file:./render.php"
+}
