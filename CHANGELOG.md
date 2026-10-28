@@ -1,5 +1,9 @@
 # Changelog
 
+## Live 1.x line — 1.21.0 — 2026-10-28
+
+- Homepage slider gains Cranberry Drink and Strawberry Drink slides (landscape on desktop, portrait under 1024px), each linking to its flavour page. Four slides, 3 s each.
+
 ## Live 1.x line — 1.20.0 — 2026-10-28
 
 - Images shown whole everywhere: audience photos re-cut to one 4:3 frame from the full originals, square gym video letterboxed in the same frame, seniors card uses the complete camping photo (separate family banner removed). Product cards and flavour pages now show whole bottle cut-outs instead of masked crops of the group photo. Stale saved card media is refreshed at render time. Browser audit: zero cropped images on home, Flavours, story and flavour pages at desktop and phone widths.

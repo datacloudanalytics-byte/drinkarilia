@@ -125,6 +125,8 @@ function arilia_home_slides() {
     return array(
         array( 'hero-poster-v111.webp', 'hero-pomegranate-portrait-v116.webp', 'A little wonder. A bold first sip. Discover Arilia Pomegranate Drink.', 'pomegranate' ),
         array( 'hero-beet-v116.webp', 'hero-beet-portrait-v116.webp', 'A little wonder. A bold first sip. Discover Arilia Beet + Lemon + Ginger Drink.', 'beet-lime-ginger' ),
+        array( 'hero-cranberry-v121.webp', 'hero-cranberry-portrait-v121.webp', 'A little tart. A beautiful twist. Arilia Cranberry Drink, 250 ml. Discover Cranberry.', 'cranberry' ),
+        array( 'hero-strawberry-v121.webp', 'hero-strawberry-portrait-v121.webp', 'Little berry. Beautiful moment. Arilia Strawberry Drink, 250 ml. Discover Strawberry.', 'strawberry' ),
     );
 }
 function arilia_campaign_poster_render( $html, $block ) {
