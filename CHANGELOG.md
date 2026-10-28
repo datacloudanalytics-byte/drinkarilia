@@ -1,5 +1,9 @@
 # Changelog
 
+## Live 1.x line — 1.18.0 — 2026-10-28
+
+- Every product is a "Drink" in copy, alt text and the audience section; no "Juice" wording remains (artwork unchanged). Same change applied to the 2.0 theme catalogue.
+
 ## Live 1.x line — 1.17.0 — 2026-10-28
 
 - Previous / next arrows on the homepage slider (sides on desktop, bottom corners on phones); left/right arrow keys work when the slider has focus.

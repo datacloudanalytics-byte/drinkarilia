@@ -14,13 +14,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Seven flavours. "type" mirrors the wording printed on each label
- * (Juice or Drink) so the website never contradicts the pack.
+ * (always Drink) so the website never contradicts the pack.
  */
 function arilia_products() {
 	return array(
 		'pomegranate'       => array(
 			'name'    => 'Pomegranate',
-			'type'    => 'Juice',
+			'type'    => 'Drink',
 			'family'  => 'fruit-favourites',
 			'tagline' => 'Ruby-red and unmistakably bold.',
 			'copy'    => 'The flavour that started it all. Deep ruby colour and a bold, familiar fruit character.',
@@ -32,7 +32,7 @@ function arilia_products() {
 		),
 		'mango'             => array(
 			'name'    => 'Mango',
-			'type'    => 'Juice',
+			'type'    => 'Drink',
 			'family'  => 'fruit-favourites',
 			'tagline' => 'Golden, sunny and smooth.',
 			'copy'    => 'The sunny centre of the collection. Golden colour and a smooth, tropical sweetness.',
@@ -44,7 +44,7 @@ function arilia_products() {
 		),
 		'strawberry'        => array(
 			'name'    => 'Strawberry',
-			'type'    => 'Juice',
+			'type'    => 'Drink',
 			'family'  => 'fruit-favourites',
 			'tagline' => 'Bright, pink and playful.',
 			'copy'    => 'A berry favourite with a bright personality and a cheerful pink palette.',
@@ -68,7 +68,7 @@ function arilia_products() {
 		),
 		'dragon-fruit'      => array(
 			'name'    => 'Dragon Fruit',
-			'type'    => 'Juice',
+			'type'    => 'Drink',
 			'family'  => 'fruit-favourites',
 			'tagline' => 'Vivid, tropical and different.',
 			'copy'    => 'Tropical character and a vivid magenta colour. A wonderfully different choice.',

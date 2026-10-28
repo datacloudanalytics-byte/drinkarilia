@@ -26,7 +26,7 @@ function arilia_audience_copy() {
                 'title' => 'For women’s wellness',
                 'items' => array(
                     array( 'cranberry', 'Cranberry Drink', 'Known for its antioxidant content, cranberry is a popular choice among women seeking a refreshing drink to support an active and healthy lifestyle. Its naturally tangy flavour makes wellness delicious.' ),
-                    array( 'pomegranate', 'Pomegranate Juice', 'Pomegranate is rich in antioxidants that help protect cells from oxidative stress and support overall well-being. A perfect daily companion for vibrant living.' ),
+                    array( 'pomegranate', 'Pomegranate Drink', 'Pomegranate is rich in antioxidants that help protect cells from oxidative stress and support overall well-being. A perfect daily companion for vibrant living.' ),
                     array( 'pomegranate-apple', 'Pomegranate + Apple Drink', 'Combining the antioxidant goodness of pomegranate with the natural vitamins found in apples, this blend offers a delicious way to stay refreshed and energised throughout the day.' ),
                 ),
             ),
@@ -34,26 +34,26 @@ function arilia_audience_copy() {
                 'icon'  => 'men',
                 'title' => 'For men’s active lifestyle',
                 'items' => array(
-                    array( 'beet-lime-ginger', 'Beet + Lime + Ginger Juice', 'This powerful combination brings together the natural vitality of beets, the freshness of lime and the warming kick of ginger. Ideal for supporting an active lifestyle and maintaining energy throughout the day.' ),
-                    array( 'pomegranate', 'Pomegranate Juice', 'A favourite among fitness enthusiasts, pomegranate provides naturally occurring antioxidants that support overall wellness and daily performance.' ),
+                    array( 'beet-lime-ginger', 'Beet + Lime + Ginger Drink', 'This powerful combination brings together the natural vitality of beets, the freshness of lime and the warming kick of ginger. Ideal for supporting an active lifestyle and maintaining energy throughout the day.' ),
+                    array( 'pomegranate', 'Pomegranate Drink', 'A favourite among fitness enthusiasts, pomegranate provides naturally occurring antioxidants that support overall wellness and daily performance.' ),
                 ),
             ),
             array(
                 'icon'  => 'kids',
                 'title' => 'For growing kids',
                 'items' => array(
-                    array( 'mango', 'Mango Juice', 'Loaded with delicious tropical flavour, mango is a natural source of vitamins and nutrients that help children stay refreshed and energised.' ),
-                    array( 'strawberry', 'Strawberry Juice', 'Sweet, fruity and packed with naturally occurring antioxidants, strawberry juice is a kid-friendly favourite that’s both tasty and refreshing.' ),
-                    array( 'dragon-fruit', 'Dragon Fruit Juice', 'With its vibrant colour and unique flavour, dragon fruit offers a fun and exciting way for kids to enjoy fruit-based nutrition.' ),
+                    array( 'mango', 'Mango Drink', 'Loaded with delicious tropical flavour, mango is a natural source of vitamins and nutrients that help children stay refreshed and energised.' ),
+                    array( 'strawberry', 'Strawberry Drink', 'Sweet, fruity and packed with naturally occurring antioxidants, strawberry drink is a kid-friendly favourite that’s both tasty and refreshing.' ),
+                    array( 'dragon-fruit', 'Dragon Fruit Drink', 'With its vibrant colour and unique flavour, dragon fruit offers a fun and exciting way for kids to enjoy fruit-based nutrition.' ),
                 ),
             ),
             array(
                 'icon'  => 'energy',
                 'title' => 'For daily energy & vitality',
                 'items' => array(
-                    array( 'beet-lime-ginger', 'Beet + Lime + Ginger Juice', 'A naturally invigorating blend that helps you feel refreshed and ready to take on the day.' ),
-                    array( 'mango', 'Mango Juice', 'Provides natural fruit goodness and refreshing hydration for people with busy lifestyles.' ),
-                    array( 'dragon-fruit', 'Dragon Fruit Juice', 'A colourful superfruit beverage that supports hydration and everyday wellness.' ),
+                    array( 'beet-lime-ginger', 'Beet + Lime + Ginger Drink', 'A naturally invigorating blend that helps you feel refreshed and ready to take on the day.' ),
+                    array( 'mango', 'Mango Drink', 'Provides natural fruit goodness and refreshing hydration for people with busy lifestyles.' ),
+                    array( 'dragon-fruit', 'Dragon Fruit Drink', 'A colourful superfruit beverage that supports hydration and everyday wellness.' ),
                 ),
             ),
             array(
@@ -61,9 +61,9 @@ function arilia_audience_copy() {
                 'title' => 'Wellness for seniors',
                 'lead'  => 'As we age, maintaining hydration and energy becomes increasingly important. Arilia’s fruit-based beverages provide natural goodness, antioxidants and refreshing flavours that can be enjoyed as part of a balanced lifestyle.',
                 'items' => array(
-                    array( 'pomegranate', 'Pomegranate Juice', '' ),
+                    array( 'pomegranate', 'Pomegranate Drink', '' ),
                     array( 'cranberry', 'Cranberry Drink', '' ),
-                    array( 'beet-lime-ginger', 'Beet + Lime + Ginger Juice', 'These nutrient-rich favourites help seniors stay refreshed, active and energised throughout the day.' ),
+                    array( 'beet-lime-ginger', 'Beet + Lime + Ginger Drink', 'These nutrient-rich favourites help seniors stay refreshed, active and energised throughout the day.' ),
                 ),
             ),
         ),
@@ -117,7 +117,7 @@ function arilia_audience_blocks() {
 function arilia_audience_media( $icon ) {
     $photos = array(
         'women'   => array( 'audience-women-v115.webp', 'Three friends sharing Arilia cranberry drinks', 900, 353 ),
-        'kids'    => array( 'audience-kids-v115.webp', 'Children laughing with glasses of Arilia mango, strawberry and dragon fruit juice', 900, 449 ),
+        'kids'    => array( 'audience-kids-v115.webp', 'Children laughing with glasses of Arilia mango, strawberry and dragon fruit drinks', 900, 449 ),
         'energy'  => array( 'audience-energy-v115.webp', 'Arilia Beet + Lime + Ginger and Pomegranate bottles with fresh ingredients', 900, 489 ),
         'seniors' => array( 'audience-seniors-v115.webp', 'Grandparents enjoying Arilia at a family picnic', 760, 610 ),
     );

@@ -148,3 +148,6 @@ Beet + Lime + Ginger. Confirm the final label name.
 
 1.17 SLIDER ARROWS
 Previous / next arrows on both sides of the homepage slider (bottom corners on phones). Left and right arrow keys also work when the slider has focus.
+
+1.18 WORDING
+Every product is referred to as a "Drink" (never "Juice") in site copy, alt text and the audience section. Bottle artwork text is unchanged.

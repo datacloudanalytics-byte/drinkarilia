@@ -189,7 +189,7 @@ function arilia_import_image( $file, $title ) {
 
 function arilia_import_all_images() {
 	$ids = array(
-		'pomegranate.webp'       => arilia_import_image( 'pomegranate.webp', 'Arilia Pomegranate Juice 250 ml bottle' ),
+		'pomegranate.webp'       => arilia_import_image( 'pomegranate.webp', 'Arilia Pomegranate Drink 250 ml bottle' ),
 		'pomegranate-apple.webp' => arilia_import_image( 'pomegranate-apple.webp', 'Arilia Pomegranate + Apple Drink 250 ml bottle' ),
 		'collection.webp'        => arilia_import_image( 'collection.webp', 'The Arilia 250 ml collection' ),
 	);

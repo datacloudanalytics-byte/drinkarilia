@@ -190,7 +190,7 @@ function arilia_page_content( $slug ) {
 				arilia_p( '250 ml · Our signature double-bulb bottle', 'arilia-hero__meta' ),
 				'arilia-hero__copy'
 			) .
-			arilia_group( arilia_img( 'pomegranate.webp', 'Arilia Pomegranate Juice in the signature 250 ml double-bulb bottle', 'arilia-hero__image', 1000, 1500 ), 'arilia-hero__art' ),
+			arilia_group( arilia_img( 'pomegranate.webp', 'Arilia Pomegranate Drink in the signature 250 ml double-bulb bottle', 'arilia-hero__image', 1000, 1500 ), 'arilia-hero__art' ),
 			'arilia-hero',
 			'section'
 		);
