@@ -154,3 +154,6 @@ Every product is referred to as a "Drink" (never "Juice") in site copy, alt text
 
 1.19 HOMEPAGE
 The "Seven ways to find your wonderful" lineup section is removed from the homepage (saved pages at render time, new imports in content). The audience section already covers all seven flavours with an Explore link.
+
+1.20 IMAGE CONSISTENCY
+All audience-card photos are re-cut from the full originals to one 4:3 frame and the square gym video sits whole inside the same frame, so people and bottles are never cropped and every card header is the same height. The camping photo is used whole on the seniors card (the separate family banner is removed as a duplicate); the story image is shown complete. Posters are never cropped at any width.

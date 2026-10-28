@@ -85,7 +85,21 @@ function arilia_refresh_bottle_images( $html, $block ) {
     $file = '';
     if ( preg_match( '/(?:^|\s)arilia-hero-image(?:\s|$)/', $classes ) ) { $file = 'pomegranate.webp'; }
     elseif ( preg_match( '/(?:^|\s)arilia-story-image(?:\s|$)/', $classes ) ) { $file = 'pomegranate-apple.webp'; }
-    elseif ( preg_match( '/(?:^|\s)(?:arilia-lineup|is-style-arilia-bottle-[a-z-]+)(?:\s|$)/', $classes ) ) { $file = 'collection.webp'; }
+    elseif ( preg_match( '/(?:^|\s)is-style-arilia-bottle-([a-z-]+)(?:\s|$)/', $classes, $bottle ) && file_exists( get_theme_file_path( 'assets/bottle-' . $bottle[1] . '-v114.webp' ) ) ) {
+        // 1.20: whole-bottle cut-out instead of a masked crop of the group photo.
+        $sizes = array( 'pomegranate' => array( 293, 560 ), 'pomegranate-apple' => array( 292, 560 ), 'beet-lime-ginger' => array( 198, 560 ), 'mango' => array( 197, 560 ), 'cranberry' => array( 198, 560 ), 'strawberry' => array( 198, 560 ), 'dragon-fruit' => array( 198, 560 ) );
+        $dim  = isset( $sizes[ $bottle[1] ] ) ? $sizes[ $bottle[1] ] : array( 200, 560 );
+        $tags = new WP_HTML_Tag_Processor( $html );
+        while ( $tags->next_tag( 'FIGURE' ) ) { $tags->add_class( 'arilia-bottle-whole' ); break; }
+        $tags = new WP_HTML_Tag_Processor( $tags->get_updated_html() );
+        while ( $tags->next_tag( 'IMG' ) ) {
+            $tags->set_attribute( 'src', arilia_asset( 'bottle-' . $bottle[1] . '-v114.webp' ) );
+            foreach ( array( 'srcset', 'sizes', 'data-src', 'data-srcset', 'data-lazy-src', 'data-lazy-srcset' ) as $attribute ) { $tags->remove_attribute( $attribute ); }
+            $tags->set_attribute( 'width', (string) $dim[0] ); $tags->set_attribute( 'height', (string) $dim[1] );
+        }
+        return $tags->get_updated_html();
+    }
+    elseif ( preg_match( '/(?:^|\s)arilia-lineup(?:\s|$)/', $classes ) ) { $file = 'collection.webp'; }
     $tags = new WP_HTML_Tag_Processor( $html );
     while ( $tags->next_tag( 'IMG' ) ) {
         $target = $file;

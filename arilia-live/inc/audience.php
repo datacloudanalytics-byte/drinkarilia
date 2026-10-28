@@ -100,7 +100,6 @@ function arilia_audience_blocks() {
     }
 
     $head  = arilia_group( arilia_p( esc_html( $c['eyebrow'] ), 'arilia-eyebrow' ) . arilia_h( esc_html( $c['heading'] ), 2, 'arilia-audience-heading' ) . arilia_p( esc_html( $c['intro'] ), 'arilia-audience-intro' ), 'arilia-audience-head' );
-    $family = arilia_group( arilia_image( 'family-v115.webp', 'A family enjoying Arilia together outdoors', 'arilia-audience-family' ), 'arilia-audience-family-wrap' );
     $close = arilia_group(
         arilia_h( esc_html( $c['close_heading'] ), 2, 'arilia-audience-close-heading' ) .
         arilia_p( esc_html( $c['close_copy'] ) ) .
@@ -109,20 +108,19 @@ function arilia_audience_blocks() {
         arilia_p( esc_html( $c['note'] ), 'arilia-audience-note' ),
         'arilia-audience-close'
     );
-    $close = $family . $close;
     return $strip . arilia_group( $head . arilia_group( $cards, 'arilia-audience-grid' ) . $close, 'arilia-audience', 'section', 'for-everyone' );
 }
 
 /** Photo or video header for an audience card. */
 function arilia_audience_media( $icon ) {
     $photos = array(
-        'women'   => array( 'audience-women-v115.webp', 'Three friends sharing Arilia cranberry drinks', 900, 353 ),
-        'kids'    => array( 'audience-kids-v115.webp', 'Children laughing with glasses of Arilia mango, strawberry and dragon fruit drinks', 900, 449 ),
-        'energy'  => array( 'audience-energy-v115.webp', 'Arilia Beet + Lime + Ginger and Pomegranate bottles with fresh ingredients', 900, 489 ),
-        'seniors' => array( 'audience-seniors-v115.webp', 'Grandparents enjoying Arilia at a family picnic', 760, 610 ),
+        'women'   => array( 'audience-women-v120.webp', 'Three friends sharing Arilia cranberry drinks', 960, 720 ),
+        'kids'    => array( 'audience-kids-v120.webp', 'Children laughing with glasses of Arilia mango, strawberry and dragon fruit drinks', 960, 720 ),
+        'energy'  => array( 'audience-energy-v120.webp', 'Arilia Beet + Lime + Ginger and Pomegranate bottles with fresh ingredients', 960, 720 ),
+        'seniors' => array( 'audience-seniors-v120.webp', 'Three generations enjoying Arilia on a camping trip', 960, 720 ),
     );
     if ( 'men' === $icon ) {
-        $src = arilia_asset( 'fitness-v115.mp4' ); $poster = arilia_asset( 'fitness-poster-v115.webp' );
+        $src = arilia_asset( 'fitness-v120.mp4' ); $poster = arilia_asset( 'fitness-poster-v120.webp' );
         $video = '<figure class="wp-block-video arilia-audience-media arilia-audience-media--video"><video autoplay loop muted playsinline preload="metadata" poster="' . esc_url( $poster ) . '" src="' . esc_url( $src ) . '" aria-label="Feel good. Show up. Arilia as part of a gym routine."></video></figure>';
         return arilia_b( 'video', array( 'className' => 'arilia-audience-media arilia-audience-media--video' ), $video );
     }
@@ -151,16 +149,21 @@ add_filter( 'render_block_core/group', 'arilia_audience_inject', 30, 2 );
 /** Saved 1.14 cards: add the photo/video header and the family banner at render time. */
 function arilia_audience_media_inject( $html, $block ) {
     $classes = isset( $block['attrs']['className'] ) ? $block['attrs']['className'] : '';
-    if ( preg_match( '/arilia-audience-card--([a-z]+)/', $classes, $m ) && false === strpos( $html, 'arilia-audience-media' ) ) {
-        $media = do_blocks( arilia_audience_media( $m[1] ) );
-        return preg_replace( '/(<article[^>]*>)/', '$1' . $media, $html, 1 );
-    }
-    if ( false !== strpos( $classes, 'arilia-audience-close' ) && ! is_admin() ) {
-        $content = get_post_field( 'post_content', get_queried_object_id() );
-        if ( is_string( $content ) && false === strpos( $content, 'arilia-audience-family' ) ) {
-            return do_blocks( arilia_group( arilia_image( 'family-v115.webp', 'A family enjoying Arilia together outdoors', 'arilia-audience-family' ), 'arilia-audience-family-wrap' ) ) . $html;
+    if ( preg_match( '/arilia-audience-card--([a-z]+)/', $classes, $m ) ) {
+        $stale = false !== strpos( $html, 'arilia-audience-media' ) && false === strpos( $html, '-v120.' );
+        if ( $stale ) { $html = preg_replace( '/<figure class="wp-block-(?:image|video)[^"]*arilia-audience-media[^"]*"[^>]*>.*?<\/figure>/s', '', $html, 1 ); }
+        if ( $stale || false === strpos( $html, 'arilia-audience-media' ) ) {
+            $media = do_blocks( arilia_audience_media( $m[1] ) );
+            return preg_replace( '/(<article[^>]*>)/', '$1' . $media, $html, 1 );
         }
     }
     return $html;
 }
 add_filter( 'render_block_core/group', 'arilia_audience_media_inject', 25, 2 );
+
+/** Pages saved with the 1.15–1.19 family banner: hide it (the camping photo now lives on the seniors card). */
+function arilia_hide_family_banner( $html, $block ) {
+    $classes = isset( $block['attrs']['className'] ) ? $block['attrs']['className'] : '';
+    return false !== strpos( $classes, 'arilia-audience-family-wrap' ) ? '' : $html;
+}
+add_filter( 'render_block_core/group', 'arilia_hide_family_banner', 26, 2 );

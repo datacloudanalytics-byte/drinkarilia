@@ -400,7 +400,7 @@ body.home .arilia-announcement,body.blog.arilia-front .arilia-announcement{displ
 .arilia-main .arilia-audience-card>.arilia-audience-item:last-child{margin-bottom:28px!important}
 .arilia-main .arilia-audience-media{margin:0 0 20px!important;width:100%;aspect-ratio:16/9;overflow:hidden;background:#fbe3e6;line-height:0}
 .arilia-main .arilia-audience-media img,.arilia-main .arilia-audience-media video{display:block;width:100%;height:100%;object-fit:cover;object-position:center 30%}
-.arilia-main .arilia-audience-media--video video{object-position:center 40%}
+.arilia-main .arilia-audience-media--video video{object-position:center}
 .arilia-main .arilia-audience-titlerow{display:flex;align-items:center;gap:14px;margin-bottom:4px!important}
 .arilia-main .arilia-audience-titlerow .arilia-audience-icon{flex:0 0 44px;width:44px;height:44px;margin:0!important;background-size:22px 22px}
 .arilia-main .arilia-audience-family-wrap{max-width:1240px;margin:52px auto 0!important;line-height:0}
@@ -464,3 +464,16 @@ body.home .arilia-announcement,body.blog.arilia-front .arilia-announcement{displ
 .arilia-slider__arrow:focus-visible{outline:3px solid #f4b942;outline-offset:3px}
 .arilia-slider__arrow svg{display:block}
 @media(max-width:700px){.arilia-slider__arrow{width:40px;height:40px;top:auto;bottom:34px;transform:none;background:rgba(255,250,242,.85)}.arilia-slider__arrow:hover{transform:scale(1.06)}.arilia-slider__arrow--prev{left:12px}.arilia-slider__arrow--next{right:12px}.arilia-slider__arrow svg{width:18px;height:18px}}
+
+/* 1.20: images shown whole. Every card photo and the video share one 4:3 frame; the story image is never cropped. */
+.arilia-main .arilia-audience-media{aspect-ratio:4/3;background:#f6ede6}
+.arilia-main .arilia-audience-media img,.arilia-main .arilia-audience-media video{object-fit:contain;object-position:center}
+.arilia-main .arilia-story-image img,.arilia-story-page .arilia-story-image img{aspect-ratio:auto;object-fit:contain;height:auto}
+.arilia-main .arilia-hero-image img,.arilia-main .arilia-lineup img,.arilia-campaign-poster img{object-fit:contain}
+@media(max-width:700px){.arilia-main .arilia-audience-media{aspect-ratio:4/3}.arilia-main .arilia-audience-family img{aspect-ratio:auto}.arilia-main .arilia-story-image img{aspect-ratio:auto;object-fit:contain}}
+/* 1.20: product cards and flavour pages show the whole bottle cut-out, centred in the arch, nothing masked. */
+.arilia-main .arilia-product-art figure.arilia-bottle-whole{width:auto;height:72%;aspect-ratio:auto;overflow:visible;mask:none;-webkit-mask:none;border-radius:0;box-shadow:none;display:flex;align-items:flex-end;justify-content:center}
+.arilia-main .arilia-product-art figure.arilia-bottle-whole img{position:static;width:auto;height:100%;max-width:100%;object-fit:contain;filter:drop-shadow(0 18px 16px rgba(43,26,31,.22))}
+.arilia-main .arilia-product-art:before,.arilia-main .arilia-product-art:after{opacity:.18}
+.arilia-main .arilia-product-detail>.arilia-product-art figure.arilia-bottle-whole{height:78%}
+@media(max-width:700px){.arilia-main .arilia-product-art figure.arilia-bottle-whole{height:74%}}

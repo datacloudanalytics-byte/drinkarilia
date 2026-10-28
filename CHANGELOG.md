@@ -1,5 +1,9 @@
 # Changelog
 
+## Live 1.x line — 1.20.0 — 2026-10-28
+
+- Images shown whole everywhere: audience photos re-cut to one 4:3 frame from the full originals, square gym video letterboxed in the same frame, seniors card uses the complete camping photo (separate family banner removed). Product cards and flavour pages now show whole bottle cut-outs instead of masked crops of the group photo. Stale saved card media is refreshed at render time. Browser audit: zero cropped images on home, Flavours, story and flavour pages at desktop and phone widths.
+
 ## Live 1.x line — 1.19.0 — 2026-10-28
 
 - Homepage lineup section ("Seven ways to find your wonderful") removed; it duplicated the audience section. Hidden at render time on saved pages and omitted from new imports.
