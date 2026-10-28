@@ -392,3 +392,51 @@ body.home .arilia-announcement,body.blog.arilia-front .arilia-announcement{displ
 .arilia-main .arilia-audience-note{font-size:12px!important;line-height:1.6;color:#7a6268;max-width:60ch;padding-top:16px;border-top:1px solid #eadfd4;margin-top:8px!important}
 @media(max-width:1000px){.arilia-main .arilia-audience-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.arilia-main .arilia-benefits{grid-template-columns:repeat(2,minmax(0,1fr));border-radius:28px;padding:16px 20px}.arilia-main .arilia-benefit{font-size:11px;letter-spacing:1.6px}}
 @media(max-width:700px){.arilia-main .arilia-benefits-wrap{margin-top:-18px;padding-inline:4%}.arilia-main .arilia-benefits{gap:14px 10px;padding:14px 12px}.arilia-main .arilia-benefit{font-size:10px;letter-spacing:1.2px}.arilia-main .arilia-benefit:before{width:36px;height:36px;background-size:19px 19px}.arilia-main .arilia-audience{padding:44px 6% 56px}.arilia-main .arilia-audience-grid{grid-template-columns:1fr;gap:16px}.arilia-main .arilia-audience-card{padding:22px;border-radius:20px}.arilia-main .arilia-audience-head{margin-bottom:28px!important}}
+
+/* 1.15: campaign photography on the audience cards, video on the active-lifestyle card, portrait posters on phones. */
+.arilia-main .arilia-audience-card{padding:0;overflow:hidden}
+.arilia-main .arilia-audience-card>*{margin-inline:28px!important}
+.arilia-main .arilia-audience-card>.arilia-audience-titlerow{margin-top:0!important}
+.arilia-main .arilia-audience-card>.arilia-audience-item:last-child{margin-bottom:28px!important}
+.arilia-main .arilia-audience-media{margin:0 0 20px!important;width:100%;aspect-ratio:16/9;overflow:hidden;background:#fbe3e6;line-height:0}
+.arilia-main .arilia-audience-media img,.arilia-main .arilia-audience-media video{display:block;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.arilia-main .arilia-audience-media--video video{object-position:center 40%}
+.arilia-main .arilia-audience-titlerow{display:flex;align-items:center;gap:14px;margin-bottom:4px!important}
+.arilia-main .arilia-audience-titlerow .arilia-audience-icon{flex:0 0 44px;width:44px;height:44px;margin:0!important;background-size:22px 22px}
+.arilia-main .arilia-audience-family-wrap{max-width:1240px;margin:52px auto 0!important;line-height:0}
+.arilia-main .arilia-audience-family{margin:0!important;border-radius:28px;overflow:hidden;box-shadow:0 20px 44px -28px rgba(43,26,31,.45)}
+.arilia-main .arilia-audience-family img{display:block;width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;object-position:center 45%}
+.arilia-main .arilia-audience-close{margin-top:36px!important}
+.arilia-campaign-poster picture{display:block;line-height:0}
+@media(max-width:700px){
+ .arilia-main .arilia-audience-card>*{margin-inline:20px!important}
+ .arilia-main .arilia-audience-card>.arilia-audience-item:last-child{margin-bottom:22px!important}
+ .arilia-main .arilia-audience-media{aspect-ratio:4/3;margin-bottom:16px!important}
+ .arilia-main .arilia-audience-family img{aspect-ratio:4/3}
+ .arilia-main .arilia-audience-family{border-radius:18px}
+ .arilia-campaign-poster img{max-height:none}
+ /* phone typography: calmer headings, readable copy, tighter sections */
+ .arilia-main h2,.arilia-main .arilia-section h2,.arilia-main .arilia-category-heading h2{font-size:clamp(28px,8vw,36px);letter-spacing:-.03em;line-height:1.08}
+ .arilia-main .arilia-section h2 br,.arilia-main .arilia-category-heading h2 br,.arilia-main .arilia-connect h2 br{display:none}
+ .arilia-main .arilia-products-hero h1{font-size:clamp(30px,8.5vw,40px)}
+ .arilia-main .arilia-section{padding:40px 6%}
+ .arilia-main .arilia-eyebrow{font-size:10px!important;letter-spacing:1.6px;margin-bottom:12px}
+ .arilia-main .arilia-centred>p,.arilia-main .arilia-category-heading p{font-size:15px;line-height:1.7}
+ .arilia-main .arilia-lineup{margin:20px 0 24px!important;border-radius:14px}
+ .arilia-main .arilia-story{gap:0}
+ .arilia-main .arilia-story-image{height:auto;max-height:none}
+ .arilia-main .arilia-story-image img{height:auto;max-height:none;aspect-ratio:4/5;object-fit:cover}
+ .arilia-main .arilia-story-copy{padding:32px 6% 40px}
+ .arilia-main .arilia-story-copy h2{font-size:32px}
+ .arilia-main .arilia-product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 12px}
+ .arilia-main .arilia-product-card h3{font-size:19px}
+ .arilia-main .arilia-product-card>p:not(.arilia-product-meta){font-size:13px}
+ .arilia-main .arilia-product-button .wp-block-button__link{font-size:12px;min-height:40px}
+ .arilia-main .arilia-connect{padding:44px 6%}
+ .arilia-main .arilia-connect h2{font-size:30px}
+ .arilia-main .arilia-contact-buttons .wp-block-button{width:100%}
+ .arilia-main .arilia-contact-buttons .wp-block-button__link{width:100%}
+ .arilia-main .arilia-audience-heading{font-size:30px}
+ .arilia-main .arilia-audience-intro{font-size:15px}
+ .arilia-ribbon p{font-size:10px;line-height:1.8;letter-spacing:1px}
+}

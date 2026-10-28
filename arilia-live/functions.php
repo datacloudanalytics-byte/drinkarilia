@@ -112,8 +112,15 @@ function arilia_campaign_poster_render( $html, $block ) {
     $file = $home ? 'hero-poster-v111.webp' : 'flavours-poster-v110.webp';
     $title = $home ? 'A little wonder. A bold first sip.' : 'Seven flavours. Endless little wonders.';
     $alt = $home ? 'Arilia Pomegranate Juice. A Little Wonder. A Bold First Sip. Explore Arilia.' : 'Seven Arilia flavours: Pomegranate, Pomegranate Apple, Beet Lime Ginger, Mango, Cranberry, Strawberry and Dragon Fruit.';
-    $img = '<img src="' . esc_url( arilia_asset( $file ) ) . '" width="' . ( $home ? '1983' : '1900' ) . '" height="' . ( $home ? '793' : '828' ) . '" alt="' . esc_attr( $alt ) . '" fetchpriority="high" decoding="async" />';
+    $mobile = $home ? 'hero-mobile-v115.webp' : 'flavours-mobile-v115.webp';
+    $img = '<picture><source media="(max-width: 700px)" srcset="' . esc_url( arilia_asset( $mobile ) ) . '" width="1000" height="' . ( $home ? '1207' : '1240' ) . '"><img src="' . esc_url( arilia_asset( $file ) ) . '" width="' . ( $home ? '1983' : '1900' ) . '" height="' . ( $home ? '793' : '828' ) . '" alt="' . esc_attr( $alt ) . '" fetchpriority="high" decoding="async" /></picture>';
     if ( $home ) { $img = '<a href="' . esc_url( arilia_url( 'products' ) ) . '" aria-label="Explore Arilia flavours">' . $img . '</a>'; }
     return '<section class="arilia-campaign-poster"><h1 class="screen-reader-text">' . esc_html( $title ) . '</h1>' . $img . '</section>';
 }
 add_filter( 'render_block_core/group', 'arilia_campaign_poster_render', 20, 2 );
+
+/** Headings keep a space before each <br>, so hiding the break on phones never glues words together. */
+function arilia_heading_break_space( $html, $block ) {
+    return preg_replace( '/\s*<br\s*\/?>/i', ' <br>', $html );
+}
+add_filter( 'render_block_core/heading', 'arilia_heading_break_space', 5, 2 );

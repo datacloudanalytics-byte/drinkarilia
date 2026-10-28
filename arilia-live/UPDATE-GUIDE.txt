@@ -124,3 +124,14 @@ Existing saved homepages receive the section automatically at render time;
 new starter imports include it as editable core blocks. Copy lives in
 inc/audience.php. The wording contains wellness claims supplied by Arilia;
 have it reviewed for compliance before public promotion.
+
+1.15 CAMPAIGN PHOTOGRAPHY AND MOBILE
+Phones now get portrait posters: the homepage hero shows the "Goodness in
+every sip" artwork and the Flavours page shows the seven-flavour poster
+rebuilt as headline plus two rows of bottles (desktop posters unchanged).
+Audience cards carry campaign photography (friends, kids, beet and
+pomegranate bottles, grandparents) and the men's card plays the six-second
+"Feel good. Show up." gym loop (muted, 390 KB, poster frame fallback).
+The camping family photo sits above "One family. Seven flavours."
+Phone typography and section spacing were tightened across the homepage,
+Flavours, story and contact sections.
