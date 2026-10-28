@@ -1,5 +1,10 @@
 # Changelog
 
+## Live 1.x line — 1.16.0 — 2026-10-28
+
+- Homepage hero is a two-slide carousel (Pomegranate Juice, Beet + Lemon + Ginger Drink) advancing every 3 s, with dots, swipe, pause on hover/focus/hidden tab and reduced-motion stop. Each slide links to its flavour page.
+- Phones and tablets (under 1024px) show the new portrait posters for both hero slides and for the Flavours page.
+
 ## Live 1.x line — 1.14.0 — 2026-10-21
 
 - New homepage section directly below the hero poster: white benefits strip (four icons) and "A flavour for every age and every lifestyle" with five audience cards (women, men, kids, daily energy, seniors), bottle thumbnails linked to flavour pages, closing line, two buttons and the wellness disclaimer. Injected at render time on saved homepages; editable core blocks on new imports. Copy in `arilia-live/inc/audience.php`.

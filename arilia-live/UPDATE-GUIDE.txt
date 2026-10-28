@@ -135,3 +135,13 @@ pomegranate bottles, grandparents) and the men's card plays the six-second
 The camping family photo sits above "One family. Seven flavours."
 Phone typography and section spacing were tightened across the homepage,
 Flavours, story and contact sections.
+
+1.16 HOMEPAGE SLIDER
+The homepage hero now rotates two campaigns every 3 seconds: Pomegranate
+Juice and Beet + Lemon + Ginger Drink. Each slide links to its flavour page.
+Dots let visitors pick a slide; the rotation pauses on hover, focus, touch
+and when the tab is hidden, and stops entirely for visitors who prefer
+reduced motion. Phones and tablets (under 1024px) show the portrait posters;
+the Flavours page uses the portrait seven-flavour poster there too.
+Note: the artwork says "Lemon" while the catalogue product is
+Beet + Lime + Ginger. Confirm the final label name.

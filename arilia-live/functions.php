@@ -103,21 +103,39 @@ function arilia_refresh_bottle_images( $html, $block ) {
 }
 add_filter( 'render_block_core/image', 'arilia_refresh_bottle_images', 20, 2 );
 
-/** Display approved campaign posters in existing page hero blocks. */
+/** Display approved campaign posters in existing page hero blocks. The homepage is a 3-second slider. */
+function arilia_poster_picture( $desktop, $portrait, $alt, $w, $h, $eager = false ) {
+    return '<picture><source media="(max-width: 1023px)" srcset="' . esc_url( arilia_asset( $portrait ) ) . '" width="941" height="1672"><img src="' . esc_url( arilia_asset( $desktop ) ) . '" width="' . $w . '" height="' . $h . '" alt="' . esc_attr( $alt ) . '" ' . ( $eager ? 'fetchpriority="high"' : 'loading="lazy"' ) . ' decoding="async" /></picture>';
+}
+function arilia_home_slides() {
+    return array(
+        array( 'hero-poster-v111.webp', 'hero-pomegranate-portrait-v116.webp', 'A little wonder. A bold first sip. Discover Arilia Pomegranate Juice.', 'pomegranate' ),
+        array( 'hero-beet-v116.webp', 'hero-beet-portrait-v116.webp', 'A little wonder. A bold first sip. Discover Arilia Beet + Lemon + Ginger Drink.', 'beet-lime-ginger' ),
+    );
+}
 function arilia_campaign_poster_render( $html, $block ) {
     $classes = preg_split( '/\s+/', isset( $block['attrs']['className'] ) ? $block['attrs']['className'] : '' );
     $home = in_array( 'arilia-hero', $classes, true );
     $flavours = in_array( 'arilia-products-hero', $classes, true ) && is_page( array( 'products', 'flavours', 'flavors' ) );
     if ( ! $home && ! $flavours ) { return $html; }
-    $file = $home ? 'hero-poster-v111.webp' : 'flavours-poster-v110.webp';
-    $title = $home ? 'A little wonder. A bold first sip.' : 'Seven flavours. Endless little wonders.';
-    $alt = $home ? 'Arilia Pomegranate Juice. A Little Wonder. A Bold First Sip. Explore Arilia.' : 'Seven Arilia flavours: Pomegranate, Pomegranate Apple, Beet Lime Ginger, Mango, Cranberry, Strawberry and Dragon Fruit.';
-    $mobile = $home ? 'hero-mobile-v115.webp' : 'flavours-mobile-v115.webp';
-    $img = '<picture><source media="(max-width: 700px)" srcset="' . esc_url( arilia_asset( $mobile ) ) . '" width="1000" height="' . ( $home ? '1207' : '1240' ) . '"><img src="' . esc_url( arilia_asset( $file ) ) . '" width="' . ( $home ? '1983' : '1900' ) . '" height="' . ( $home ? '793' : '828' ) . '" alt="' . esc_attr( $alt ) . '" fetchpriority="high" decoding="async" /></picture>';
-    if ( $home ) { $img = '<a href="' . esc_url( arilia_url( 'products' ) ) . '" aria-label="Explore Arilia flavours">' . $img . '</a>'; }
-    return '<section class="arilia-campaign-poster"><h1 class="screen-reader-text">' . esc_html( $title ) . '</h1>' . $img . '</section>';
+    if ( $flavours ) {
+        $img = arilia_poster_picture( 'flavours-poster-v110.webp', 'flavours-portrait-v116.webp', 'Seven Arilia flavours: Pomegranate, Pomegranate Apple, Beet Lime Ginger, Mango, Cranberry, Strawberry and Dragon Fruit.', 1900, 828, true );
+        return '<section class="arilia-campaign-poster"><h1 class="screen-reader-text">Seven flavours. Endless little wonders.</h1>' . $img . '</section>';
+    }
+    $slides = ''; $dots = '';
+    foreach ( arilia_home_slides() as $i => $s ) {
+        $slides .= '<a class="arilia-slide' . ( 0 === $i ? ' is-active' : '' ) . '" href="' . esc_url( arilia_url( $s[3] ) ) . '" aria-label="' . esc_attr( $s[2] ) . '"' . ( 0 === $i ? '' : ' aria-hidden="true" tabindex="-1"' ) . '>' . arilia_poster_picture( $s[0], $s[1], $s[2], 1983, 793, 0 === $i ) . '</a>';
+        $dots   .= '<button type="button" class="arilia-slider__dot' . ( 0 === $i ? ' is-active' : '' ) . '" data-slide="' . $i . '" aria-label="' . esc_attr( 'Show slide ' . ( $i + 1 ) ) . '"' . ( 0 === $i ? ' aria-current="true"' : '' ) . '></button>';
+    }
+    return '<section class="arilia-campaign-poster arilia-slider" data-interval="3000" aria-roledescription="carousel" aria-label="Arilia campaigns"><h1 class="screen-reader-text">A little wonder. A bold first sip.</h1><div class="arilia-slider__track">' . $slides . '</div><div class="arilia-slider__dots" role="group" aria-label="Choose slide">' . $dots . '</div></section>';
 }
 add_filter( 'render_block_core/group', 'arilia_campaign_poster_render', 20, 2 );
+
+function arilia_enqueue_slider() {
+    if ( ! is_front_page() ) { return; }
+    wp_enqueue_script( 'arilia-slider', get_theme_file_uri( 'assets/slider.js' ), array(), (string) filemtime( get_theme_file_path( 'assets/slider.js' ) ), array( 'strategy' => 'defer', 'in_footer' => true ) );
+}
+add_action( 'wp_enqueue_scripts', 'arilia_enqueue_slider' );
 
 /** Headings keep a space before each <br>, so hiding the break on phones never glues words together. */
 function arilia_heading_break_space( $html, $block ) {
