@@ -145,3 +145,6 @@ reduced motion. Phones and tablets (under 1024px) show the portrait posters;
 the Flavours page uses the portrait seven-flavour poster there too.
 Note: the artwork says "Lemon" while the catalogue product is
 Beet + Lime + Ginger. Confirm the final label name.
+
+1.17 SLIDER ARROWS
+Previous / next arrows on both sides of the homepage slider (bottom corners on phones). Left and right arrow keys also work when the slider has focus.

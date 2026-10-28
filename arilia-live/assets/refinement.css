@@ -455,3 +455,12 @@ body.home .arilia-announcement,body.blog.arilia-front .arilia-announcement{displ
 .arilia-campaign-poster picture,.arilia-campaign-poster img{display:block;width:100%;height:auto}
 @media(max-width:1023px){.arilia-campaign-poster img{max-height:none}.arilia-slider__dots{bottom:10px}}
 @media(prefers-reduced-motion:reduce){.arilia-slider .arilia-slide{transition:none}}
+
+/* 1.17: previous / next arrows on the homepage slider. */
+.arilia-slider__arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:48px;height:48px;padding:0;border:0;border-radius:50%;background:rgba(255,250,242,.92);color:#a4122e;box-shadow:0 8px 22px rgba(43,26,31,.22);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background-color .2s ease,transform .2s ease,opacity .2s ease}
+.arilia-slider__arrow--prev{left:max(12px,2%)}
+.arilia-slider__arrow--next{right:max(12px,2%)}
+.arilia-slider__arrow:hover{background:#a4122e;color:#fff;transform:translateY(-50%) scale(1.06)}
+.arilia-slider__arrow:focus-visible{outline:3px solid #f4b942;outline-offset:3px}
+.arilia-slider__arrow svg{display:block}
+@media(max-width:700px){.arilia-slider__arrow{width:40px;height:40px;top:auto;bottom:34px;transform:none;background:rgba(255,250,242,.85)}.arilia-slider__arrow:hover{transform:scale(1.06)}.arilia-slider__arrow--prev{left:12px}.arilia-slider__arrow--next{right:12px}.arilia-slider__arrow svg{width:18px;height:18px}}

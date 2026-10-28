@@ -1,5 +1,9 @@
 # Changelog
 
+## Live 1.x line — 1.17.0 — 2026-10-28
+
+- Previous / next arrows on the homepage slider (sides on desktop, bottom corners on phones); left/right arrow keys work when the slider has focus.
+
 ## Live 1.x line — 1.16.0 — 2026-10-28
 
 - Homepage hero is a two-slide carousel (Pomegranate Juice, Beet + Lemon + Ginger Drink) advancing every 3 s, with dots, swipe, pause on hover/focus/hidden tab and reduced-motion stop. Each slide links to its flavour page.

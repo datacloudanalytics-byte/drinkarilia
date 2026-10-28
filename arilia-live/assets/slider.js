@@ -18,6 +18,8 @@
 	function start() { if ( reduce || timer ) { return; } timer = setInterval( function () { show( i + 1 ); }, interval ); }
 	function stop() { clearInterval( timer ); timer = null; }
 	dots.forEach( function ( d ) { d.addEventListener( 'click', function () { stop(); show( parseInt( d.getAttribute( 'data-slide' ), 10 ) ); start(); } ); } );
+	root.querySelectorAll( '.arilia-slider__arrow' ).forEach( function ( b ) { b.addEventListener( 'click', function () { stop(); show( i + parseInt( b.getAttribute( 'data-dir' ), 10 ) ); start(); } ); } );
+	root.addEventListener( 'keydown', function ( e ) { if ( e.key === 'ArrowLeft' ) { stop(); show( i - 1 ); start(); } else if ( e.key === 'ArrowRight' ) { stop(); show( i + 1 ); start(); } } );
 	root.addEventListener( 'mouseenter', stop ); root.addEventListener( 'mouseleave', start );
 	root.addEventListener( 'focusin', stop ); root.addEventListener( 'focusout', start );
 	document.addEventListener( 'visibilitychange', function () { document.hidden ? stop() : start(); } );
