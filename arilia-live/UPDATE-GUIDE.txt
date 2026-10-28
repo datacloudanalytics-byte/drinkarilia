@@ -160,3 +160,6 @@ All audience-card photos are re-cut from the full originals to one 4:3 frame and
 
 1.21 SLIDER
 Two more homepage slides: Cranberry Drink ("A little tart. A beautiful twist.") and Strawberry Drink ("Little berry. Beautiful moment."), landscape on desktop and portrait on phones/tablets, each linking to its flavour page. Four slides, 3 seconds each.
+
+1.22 SLIDER
+Dragon Fruit Drink and Mango Drink slides added (six slides, 3 seconds each), landscape on desktop and portrait under 1024px, each linking to its flavour page.

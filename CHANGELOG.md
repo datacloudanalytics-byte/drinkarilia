@@ -1,5 +1,9 @@
 # Changelog
 
+## Live 1.x line — 1.22.0 — 2026-10-28
+
+- Homepage slider gains Dragon Fruit Drink and Mango Drink slides (landscape on desktop, portrait under 1024px), each linking to its flavour page. Six slides, 3 s each.
+
 ## Live 1.x line — 1.21.0 — 2026-10-28
 
 - Homepage slider gains Cranberry Drink and Strawberry Drink slides (landscape on desktop, portrait under 1024px), each linking to its flavour page. Four slides, 3 s each.
