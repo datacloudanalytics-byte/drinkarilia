@@ -142,3 +142,12 @@ function arilia_heading_break_space( $html, $block ) {
     return preg_replace( '/\s*<br\s*\/?>/i', ' <br>', $html );
 }
 add_filter( 'render_block_core/heading', 'arilia_heading_break_space', 5, 2 );
+
+/** 1.19: the homepage lineup section ("Seven ways to find your wonderful") duplicates the audience section, so it is not shown. */
+function arilia_hide_home_lineup( $html, $block ) {
+    if ( ! is_front_page() || is_admin() ) { return $html; }
+    $classes = isset( $block['attrs']['className'] ) ? $block['attrs']['className'] : '';
+    if ( false !== strpos( $classes, 'arilia-centred' ) && false !== strpos( $html, 'arilia-lineup' ) ) { return ''; }
+    return $html;
+}
+add_filter( 'render_block_core/group', 'arilia_hide_home_lineup', 15, 2 );

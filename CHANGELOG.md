@@ -1,5 +1,9 @@
 # Changelog
 
+## Live 1.x line — 1.19.0 — 2026-10-28
+
+- Homepage lineup section ("Seven ways to find your wonderful") removed; it duplicated the audience section. Hidden at render time on saved pages and omitted from new imports.
+
 ## Live 1.x line — 1.18.0 — 2026-10-28
 
 - Every product is a "Drink" in copy, alt text and the audience section; no "Juice" wording remains (artwork unchanged). Same change applied to the 2.0 theme catalogue.

@@ -129,7 +129,7 @@ function arilia_page_content( $slug ) {
         $story = arilia_group( arilia_image( 'pomegranate-apple.webp', 'Arilia pomegranate and apple drink in its double-bulb bottle', 'arilia-story-image' ) .
             arilia_group( arilia_p( 'THE ARILIA SPIRIT', 'arilia-eyebrow' ) . arilia_h( 'FRUIT.<br>WITH A<br>POINT OF VIEW.' ) . arilia_p( 'Some moments deserve a little more colour. A pause in the afternoon. A conversation that keeps going. Something different at the table.' ) .
             arilia_buttons( array( array( 'Step into our world ↗', arilia_url( 'our-story' ) ) ) ), 'arilia-story-copy' ), 'arilia-story', 'section' );
-        return $hero . arilia_audience_blocks() . arilia_group( arilia_p( 'POMEGRANATE · MANGO · CRANBERRY · STRAWBERRY · DRAGON FRUIT' ), 'arilia-ribbon' ) . $collection . $story . arilia_contact_banner();
+        return $hero . arilia_audience_blocks() . arilia_group( arilia_p( 'POMEGRANATE · MANGO · CRANBERRY · STRAWBERRY · DRAGON FRUIT' ), 'arilia-ribbon' ) . $story . arilia_contact_banner();
     }
     if ( 'products' === $slug ) {
         $content = arilia_group( arilia_p( 'THE ARILIA COLLECTION', 'arilia-eyebrow' ) . arilia_h( 'FRUIT TAKES<br>CENTRE STAGE.', 1 ) . arilia_p( 'Colourful favourites. Curious combinations.<br>Find your next little wonderful.' ), 'arilia-products-hero', 'section' );
