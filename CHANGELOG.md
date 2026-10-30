@@ -1,5 +1,9 @@
 # Changelog
 
+## Live 1.x line — 1.29.0 — 2026-10-30
+
+- Our Story gains a pomegranate heritage section ("A little fruit. A long Indian story.") between the origin story and the fruit-to-bottle steps: supplied poster shown whole, supplied copy as live text.
+
 ## Live 1.x line — 1.28.0 — 2026-10-30
 
 - Adopted the supplied 1.27 theme as the base (new logo, bottle photos, posters).

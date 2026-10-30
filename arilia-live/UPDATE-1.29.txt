@@ -1,0 +1,3 @@
+ARILIA 1.29 — HERITAGE SECTION
+
+Our Story gains "A little fruit. A long Indian story." between the origin story and the fruit-to-bottle steps: the supplied heritage poster shown whole, with the supplied copy (Dadima, Ayurvedic texts, anardana, western Himalayas) as live text beside it. Copy in inc/about.php. Render-time on saved pages; no page re-import.
