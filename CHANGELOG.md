@@ -1,5 +1,10 @@
 # Changelog
 
+## Live 1.x line — 1.28.0 — 2026-10-30
+
+- Adopted the supplied 1.27 theme as the base (new logo, bottle photos, posters).
+- Our Story page rebuilt on the structure of POM Wonderful's Our Story page: hero, origin story, four-step "Fruit to bottle" process, headline numbers band, "More than meets the label" details, lifestyle poster gallery (posters shown whole), values and Stock Arilia CTA. Applied at render time to the saved page; editable blocks on new imports. Copy in `arilia-live/inc/about.php`.
+
 ## Live 1.x line — 1.22.0 — 2026-10-28
 
 - Homepage slider gains Dragon Fruit Drink and Mango Drink slides (landscape on desktop, portrait under 1024px), each linking to its flavour page. Six slides, 3 s each.

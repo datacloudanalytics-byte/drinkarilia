@@ -1,0 +1,17 @@
+ARILIA 1.28 — OUR STORY PAGE
+
+The Our Story page is rebuilt on the structure of POM Wonderful's Our Story
+page: hero with the first flavour, "Where it started" origin story,
+"Fruit to bottle" four-step process, a headline-numbers band (7 flavours,
+250 ml, 1 bottle, 0 guesswork), "More than meets the label" bottle details,
+a "Made for every table" photo gallery, three values and the Stock Arilia
+call to action. Copy lives in inc/about.php. Saved Our Story pages receive
+the layout at render time; new starter imports get editable core blocks.
+
+Review before launch: the origin copy says Arilia is made by Pionory
+Beverages (from the contact email domain) and describes pomegranate as the
+first flavour. Add a founding year or hometown if you want them shown.
+No nutrition or health claims are made on this page.
+
+Install: Appearance > Themes > Add New > Upload Theme > Replace current
+with uploaded. Clear GoDaddy cache. Do not recreate pages.

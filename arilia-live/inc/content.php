@@ -144,11 +144,7 @@ function arilia_page_content( $slug ) {
         return $content . arilia_contact_banner();
     }
     if ( 'our-story' === $slug ) {
-        $points = '';
-        foreach ( array( array( 'Two curves. One character.', 'A distinctive double-bulb silhouette makes Arilia recognisable at a glance.' ), array( 'The little details.', 'Leaf detailing at the neck, a ruby-red cap, and ivory labels bring the design together.' ), array( 'Your 250 ml moment.', 'A compact format for a colourful little break, wherever the day takes you.' ) ) as $point ) { $points .= arilia_group( arilia_h( $point[0], 3 ) . arilia_p( $point[1] ), 'arilia-bottle-point' ); }
-        return arilia_group( arilia_p( 'THE ARILIA SPIRIT', 'arilia-eyebrow' ) . arilia_h( 'MAKE ROOM<br>FOR A LITTLE WONDER.', 1 ) . arilia_p( 'Colourful flavours. A bottle with character. A little curiosity in the everyday.' ), 'arilia-products-hero', 'section' ) .
-            arilia_group( arilia_image( 'pomegranate-apple.webp', 'Arilia pomegranate and apple bottle', 'arilia-story-image' ) . arilia_group( arilia_h( 'A COLOURFUL<br>POINT OF VIEW.' ) . arilia_p( 'Arilia brings a playful point of view to the everyday, with a collection of fruit flavours and combinations made to be explored.' ) . arilia_p( 'From Pomegranate and Mango to Beet + Lemon + Ginger, the collection gives familiar favourites a different setting.' ), 'arilia-story-copy' ), 'arilia-story', 'section' ) .
-            arilia_group( arilia_h( 'IMPOSSIBLE TO MISS.' ) . arilia_group( $points, 'arilia-bottle-points' ), 'arilia-section', 'section' ) . arilia_contact_banner();
+        return arilia_about_blocks();
     }
     if ( 'contact' === $slug ) {
         return arilia_group( arilia_p( 'SAY HELLO TO ARILIA', 'arilia-eyebrow' ) . arilia_h( 'LET’S GROW<br>SOMETHING WONDERFUL.', 1 ) . arilia_p( 'For product questions, retail, distribution, and hospitality enquiries.' ), 'arilia-products-hero', 'section' ) .
