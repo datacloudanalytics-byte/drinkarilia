@@ -67,7 +67,7 @@ add_filter( 'render_block_core/paragraph', 'arilia_brand_line_render', 10, 2 );
 
 /** Use the supplied brand artwork in default and previously saved wordmarks. */
 function arilia_logo_markup() {
-    return '<a class="arilia-logo-link" href="' . esc_url( home_url( '/' ) ) . '"><img class="arilia-logo-image" src="' . esc_url( get_theme_file_uri( 'assets/arilia-logo-v16.webp' ) ) . '" width="1536" height="1024" alt="Arilia — A Little Wonder. Home" decoding="async" /></a>';
+    return '<a class="arilia-logo-link" href="' . esc_url( home_url( '/' ) ) . '"><img class="arilia-logo-image" src="' . esc_url( get_theme_file_uri( 'assets/arilia-logo-v124.webp' ) ) . '" width="1536" height="1024" alt="Arilia — A Little Wonder. Home" decoding="async" /></a>';
 }
 function arilia_logo_render( $html, $block ) {
     $classes = isset( $block['attrs']['className'] ) ? $block['attrs']['className'] : '';
@@ -85,15 +85,15 @@ function arilia_refresh_bottle_images( $html, $block ) {
     $file = '';
     if ( preg_match( '/(?:^|\s)arilia-hero-image(?:\s|$)/', $classes ) ) { $file = 'pomegranate.webp'; }
     elseif ( preg_match( '/(?:^|\s)arilia-story-image(?:\s|$)/', $classes ) ) { $file = 'pomegranate-apple.webp'; }
-    elseif ( preg_match( '/(?:^|\s)is-style-arilia-bottle-([a-z-]+)(?:\s|$)/', $classes, $bottle ) && file_exists( get_theme_file_path( 'assets/bottle-' . $bottle[1] . '-v114.webp' ) ) ) {
+    elseif ( preg_match( '/(?:^|\s)is-style-arilia-bottle-([a-z-]+)(?:\s|$)/', $classes, $bottle ) && file_exists( get_theme_file_path( 'assets/bottle-' . $bottle[1] . '-v126.webp' ) ) ) {
         // 1.20: whole-bottle cut-out instead of a masked crop of the group photo.
         $sizes = array( 'pomegranate' => array( 293, 560 ), 'pomegranate-apple' => array( 292, 560 ), 'beet-lime-ginger' => array( 198, 560 ), 'mango' => array( 197, 560 ), 'cranberry' => array( 198, 560 ), 'strawberry' => array( 198, 560 ), 'dragon-fruit' => array( 198, 560 ) );
-        $dim  = isset( $sizes[ $bottle[1] ] ) ? $sizes[ $bottle[1] ] : array( 200, 560 );
+        $dim = array( 1024, 1536 );
         $tags = new WP_HTML_Tag_Processor( $html );
         while ( $tags->next_tag( 'FIGURE' ) ) { $tags->add_class( 'arilia-bottle-whole' ); break; }
         $tags = new WP_HTML_Tag_Processor( $tags->get_updated_html() );
         while ( $tags->next_tag( 'IMG' ) ) {
-            $tags->set_attribute( 'src', arilia_asset( 'bottle-' . $bottle[1] . '-v114.webp' ) );
+            $tags->set_attribute( 'src', arilia_asset( 'bottle-' . $bottle[1] . '-v126.webp' ) );
             foreach ( array( 'srcset', 'sizes', 'data-src', 'data-srcset', 'data-lazy-src', 'data-lazy-srcset' ) as $attribute ) { $tags->remove_attribute( $attribute ); }
             $tags->set_attribute( 'width', (string) $dim[0] ); $tags->set_attribute( 'height', (string) $dim[1] );
         }
@@ -110,8 +110,8 @@ function arilia_refresh_bottle_images( $html, $block ) {
         if ( ! $target ) { continue; }
         $tags->set_attribute( 'src', arilia_asset( $target ) );
         foreach ( array( 'srcset', 'sizes', 'data-src', 'data-srcset', 'data-lazy-src', 'data-lazy-srcset' ) as $attribute ) { $tags->remove_attribute( $attribute ); }
-        $tags->set_attribute( 'width', 'collection.webp' === $target ? '1774' : '1000' );
-        $tags->set_attribute( 'height', 'collection.webp' === $target ? '887' : '1500' );
+        $tags->set_attribute( 'width', 'collection.webp' === $target ? '1900' : '1024' );
+        $tags->set_attribute( 'height', 'collection.webp' === $target ? '828' : '1536' );
     }
     return $tags->get_updated_html();
 }
@@ -119,16 +119,19 @@ add_filter( 'render_block_core/image', 'arilia_refresh_bottle_images', 20, 2 );
 
 /** Display approved campaign posters in existing page hero blocks. The homepage is a 3-second slider. */
 function arilia_poster_picture( $desktop, $portrait, $alt, $w, $h, $eager = false ) {
-    return '<picture><source media="(max-width: 1023px)" srcset="' . esc_url( arilia_asset( $portrait ) ) . '" width="941" height="1672"><img src="' . esc_url( arilia_asset( $desktop ) ) . '" width="' . $w . '" height="' . $h . '" alt="' . esc_attr( $alt ) . '" ' . ( $eager ? 'fetchpriority="high"' : 'loading="lazy"' ) . ' decoding="async" /></picture>';
+    $portrait_size = getimagesize( get_theme_file_path( 'assets/' . $portrait ) );
+    $pw = $portrait_size ? (int) $portrait_size[0] : 941;
+    $ph = $portrait_size ? (int) $portrait_size[1] : 1672;
+    return '<picture><source media="(max-width: 1023px)" srcset="' . esc_url( arilia_asset( $portrait ) ) . '" width="' . $pw . '" height="' . $ph . '"><img src="' . esc_url( arilia_asset( $desktop ) ) . '" width="' . $w . '" height="' . $h . '" alt="' . esc_attr( $alt ) . '" ' . ( $eager ? 'fetchpriority="high"' : 'loading="lazy"' ) . ' decoding="async" /></picture>';
 }
 function arilia_home_slides() {
     return array(
-        array( 'hero-poster-v111.webp', 'hero-pomegranate-portrait-v116.webp', 'A little wonder. A bold first sip. Discover Arilia Pomegranate Drink.', 'pomegranate' ),
-        array( 'hero-beet-v116.webp', 'hero-beet-portrait-v116.webp', 'A little wonder. A bold first sip. Discover Arilia Beet + Lemon + Ginger Drink.', 'beet-lime-ginger' ),
-        array( 'hero-cranberry-v121.webp', 'hero-cranberry-portrait-v121.webp', 'A little tart. A beautiful twist. Arilia Cranberry Drink, 250 ml. Discover Cranberry.', 'cranberry' ),
-        array( 'hero-strawberry-v121.webp', 'hero-strawberry-portrait-v121.webp', 'Little berry. Beautiful moment. Arilia Strawberry Drink, 250 ml. Discover Strawberry.', 'strawberry' ),
-        array( 'hero-dragon-fruit-v122.webp', 'hero-dragon-fruit-portrait-v122.webp', 'A little unexpected. A lot to discover. Arilia Dragon Fruit Drink, 250 ml. Discover Dragon Fruit.', 'dragon-fruit' ),
-        array( 'hero-mango-v122.webp', 'hero-mango-portrait-v122.webp', 'Golden by nature. Wonderfully mango. Arilia Mango Drink, 250 ml. Discover Mango.', 'mango' ),
+        array( 'hero-poster-v123.webp', 'hero-pomegranate-portrait-v127.webp', 'A little wonder. A bold first sip. Discover Arilia Pomegranate Drink.', 'pomegranate' ),
+        array( 'hero-beet-v123.webp', 'hero-beet-portrait-v123.webp', 'A little wonder. A bold first sip. Discover Arilia Beet + Lemon + Ginger Drink.', 'beet-lime-ginger' ),
+        array( 'hero-cranberry-v123.webp', 'hero-cranberry-portrait-v123.webp', 'A little tart. A beautiful twist. Arilia Cranberry Drink, 250 ml. Discover Cranberry.', 'cranberry' ),
+        array( 'hero-strawberry-v123.webp', 'hero-strawberry-portrait-v123.webp', 'Little berry. Beautiful moment. Arilia Strawberry Drink, 250 ml. Discover Strawberry.', 'strawberry' ),
+        array( 'hero-dragon-fruit-v123.webp', 'hero-dragon-fruit-portrait-v123.webp', 'A little unexpected. A lot to discover. Arilia Dragon Fruit Drink, 250 ml. Discover Dragon Fruit.', 'dragon-fruit' ),
+        array( 'hero-mango-v123.webp', 'hero-mango-portrait-v123.webp', 'Golden by nature. Wonderfully mango. Arilia Mango Drink, 250 ml. Discover Mango.', 'mango' ),
     );
 }
 function arilia_campaign_poster_render( $html, $block ) {
@@ -137,7 +140,7 @@ function arilia_campaign_poster_render( $html, $block ) {
     $flavours = in_array( 'arilia-products-hero', $classes, true ) && is_page( array( 'products', 'flavours', 'flavors' ) );
     if ( ! $home && ! $flavours ) { return $html; }
     if ( $flavours ) {
-        $img = arilia_poster_picture( 'flavours-poster-v110.webp', 'flavours-portrait-v116.webp', 'Seven Arilia flavours: Pomegranate, Pomegranate Apple, Beet Lime Ginger, Mango, Cranberry, Strawberry and Dragon Fruit.', 1900, 828, true );
+        $img = arilia_poster_picture( 'flavours-poster-v126.webp', 'flavours-portrait-v127.webp', 'Seven Arilia flavours: Pomegranate, Pomegranate Apple, Beet Lemon Ginger, Mango, Cranberry, Strawberry and Dragon Fruit.', 1900, 828, true );
         return '<section class="arilia-campaign-poster"><h1 class="screen-reader-text">Seven flavours. Endless little wonders.</h1>' . $img . '</section>';
     }
     $slides = ''; $dots = '';
@@ -169,3 +172,28 @@ function arilia_hide_home_lineup( $html, $block ) {
     return $html;
 }
 add_filter( 'render_block_core/group', 'arilia_hide_home_lineup', 15, 2 );
+
+function arilia_refresh_v124_images( $html ) {
+ $map = array( 'arilia-logo-v16.webp' => 'arilia-logo-v124.webp', 'audience-seniors-v120.webp' => 'audience-seniors-v124.webp', 'audience-women-v120.webp' => 'audience-women-v124.webp', 'audience-kids-v120.webp' => 'audience-kids-v124.webp', 'audience-energy-v120.webp' => 'audience-energy-v124.webp', 'pomegranate-v19.webp' => 'pomegranate-v124.webp', 'pomegranate-apple-v19.webp' => 'pomegranate-apple-v124.webp', 'bottle-pomegranate-v114.webp' => 'bottle-pomegranate-v126.webp', 'bottle-pomegranate-apple-v114.webp' => 'bottle-pomegranate-apple-v126.webp', 'bottle-cranberry-v114.webp' => 'bottle-cranberry-v126.webp', 'bottle-dragon-fruit-v114.webp' => 'bottle-dragon-fruit-v126.webp', 'bottle-strawberry-v114.webp' => 'bottle-strawberry-v126.webp', 'bottle-beet-lime-ginger-v114.webp' => 'bottle-beet-lime-ginger-v126.webp', 'bottle-mango-v114.webp' => 'bottle-mango-v126.webp' );
+
+ foreach ( array( 'pomegranate', 'pomegranate-apple', 'cranberry', 'dragon-fruit', 'strawberry', 'beet-lime-ginger', 'mango' ) as $slug ) {
+  $map['bottle-' . $slug . '-v124.webp'] = 'bottle-' . $slug . '-v126.webp';
+ }
+ $map['pomegranate-v124.webp'] = 'bottle-pomegranate-v126.webp';
+ $map['pomegranate-apple-v124.webp'] = 'bottle-pomegranate-apple-v126.webp';
+ $map['pomegranate-v19.webp'] = 'bottle-pomegranate-v126.webp';
+ $map['pomegranate-apple-v19.webp'] = 'bottle-pomegranate-apple-v126.webp';
+ $map['collection-v19.webp'] = 'flavours-poster-v126.webp';
+ $tags = new WP_HTML_Tag_Processor( $html );
+ while ( $tags->next_tag( 'IMG' ) ) {
+  $src = $tags->get_attribute( 'src' );
+  if ( ! is_string( $src ) ) { continue; }
+  $name = basename( (string) parse_url( $src, PHP_URL_PATH ) );
+  if ( ! isset( $map[$name] ) ) { continue; }
+  $tags->set_attribute( 'src', arilia_asset( $map[$name] ) );
+  foreach ( array('srcset','sizes','data-src','data-srcset','data-lazy-src','data-lazy-srcset') as $attr ) { $tags->remove_attribute( $attr ); }
+  $tags->remove_attribute('width'); $tags->remove_attribute('height');
+ }
+ return $tags->get_updated_html();
+}
+add_filter( 'render_block', 'arilia_refresh_v124_images', 40 );

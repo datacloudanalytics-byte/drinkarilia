@@ -10,12 +10,12 @@ function arilia_products() {
         'cranberry' => array( 'name' => 'Cranberry', 'family' => 'Fruit favourite', 'copy' => 'A rich ruby colour and a berry character all its own.' ),
         'dragon-fruit' => array( 'name' => 'Dragon Fruit', 'family' => 'Fruit favourite', 'copy' => 'Tropical character. Vivid colour. A wonderfully different choice.' ),
         'pomegranate-apple' => array( 'name' => 'Pomegranate + Apple', 'family' => 'Creative blend', 'copy' => 'Two familiar favourites, brought together in one colourful pairing.' ),
-        'beet-lime-ginger' => array( 'name' => 'Beet + Lime + Ginger', 'family' => 'Creative blend', 'copy' => 'An earthy root, a citrus note, and a little spice. A trio worth exploring.' ),
+        'beet-lime-ginger' => array( 'name' => 'Beet + Lemon + Ginger', 'family' => 'Creative blend', 'copy' => 'An earthy root, a citrus note, and a little spice. A trio worth exploring.' ),
     );
 }
 
 function arilia_asset( $name ) {
-    $map = array( 'pomegranate.webp' => 'pomegranate-v19.webp', 'pomegranate-apple.webp' => 'pomegranate-apple-v19.webp', 'collection.webp' => 'collection-v19.webp' );
+    $map = array( 'pomegranate.webp' => 'bottle-pomegranate-v126.webp', 'pomegranate-apple.webp' => 'bottle-pomegranate-apple-v126.webp', 'collection.webp' => 'flavours-poster-v126.webp' );
     return get_theme_file_uri( 'assets/' . ( isset( $map[$name] ) ? $map[$name] : $name ) );
 }
 function arilia_url( $slug ) {
@@ -147,7 +147,7 @@ function arilia_page_content( $slug ) {
         $points = '';
         foreach ( array( array( 'Two curves. One character.', 'A distinctive double-bulb silhouette makes Arilia recognisable at a glance.' ), array( 'The little details.', 'Leaf detailing at the neck, a ruby-red cap, and ivory labels bring the design together.' ), array( 'Your 250 ml moment.', 'A compact format for a colourful little break, wherever the day takes you.' ) ) as $point ) { $points .= arilia_group( arilia_h( $point[0], 3 ) . arilia_p( $point[1] ), 'arilia-bottle-point' ); }
         return arilia_group( arilia_p( 'THE ARILIA SPIRIT', 'arilia-eyebrow' ) . arilia_h( 'MAKE ROOM<br>FOR A LITTLE WONDER.', 1 ) . arilia_p( 'Colourful flavours. A bottle with character. A little curiosity in the everyday.' ), 'arilia-products-hero', 'section' ) .
-            arilia_group( arilia_image( 'pomegranate-apple.webp', 'Arilia pomegranate and apple bottle', 'arilia-story-image' ) . arilia_group( arilia_h( 'A COLOURFUL<br>POINT OF VIEW.' ) . arilia_p( 'Arilia brings a playful point of view to the everyday, with a collection of fruit flavours and combinations made to be explored.' ) . arilia_p( 'From Pomegranate and Mango to Beet + Lime + Ginger, the collection gives familiar favourites a different setting.' ), 'arilia-story-copy' ), 'arilia-story', 'section' ) .
+            arilia_group( arilia_image( 'pomegranate-apple.webp', 'Arilia pomegranate and apple bottle', 'arilia-story-image' ) . arilia_group( arilia_h( 'A COLOURFUL<br>POINT OF VIEW.' ) . arilia_p( 'Arilia brings a playful point of view to the everyday, with a collection of fruit flavours and combinations made to be explored.' ) . arilia_p( 'From Pomegranate and Mango to Beet + Lemon + Ginger, the collection gives familiar favourites a different setting.' ), 'arilia-story-copy' ), 'arilia-story', 'section' ) .
             arilia_group( arilia_h( 'IMPOSSIBLE TO MISS.' ) . arilia_group( $points, 'arilia-bottle-points' ), 'arilia-section', 'section' ) . arilia_contact_banner();
     }
     if ( 'contact' === $slug ) {

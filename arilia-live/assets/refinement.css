@@ -477,3 +477,21 @@ body.home .arilia-announcement,body.blog.arilia-front .arilia-announcement{displ
 .arilia-main .arilia-product-art:before,.arilia-main .arilia-product-art:after{opacity:.18}
 .arilia-main .arilia-product-detail>.arilia-product-art figure.arilia-bottle-whole{height:78%}
 @media(max-width:700px){.arilia-main .arilia-product-art figure.arilia-bottle-whole{height:74%}}
+
+/* 1.24 supplied complete bottle photography and full lifestyle posters. */
+.arilia-main .arilia-product-art figure.arilia-bottle-whole{width:86%;height:86%;overflow:hidden;border-radius:100px 100px 12px 12px}
+.arilia-main .arilia-product-art figure.arilia-bottle-whole img{width:100%;height:100%;object-fit:contain;filter:none}
+.arilia-main .arilia-audience-media:not(.arilia-audience-media--video){aspect-ratio:auto}
+.arilia-main .arilia-audience-media:not(.arilia-audience-media--video) img{height:auto;width:100%;object-fit:contain}
+
+/* 1.25: blend the supplied white artwork and remove its visual padding. */
+.arilia-header .arilia-logo-link,.arilia-footer .arilia-logo-link{display:flex;align-items:center;justify-content:center;overflow:hidden;width:165px;height:108px;max-width:none;mix-blend-mode:multiply;background:transparent;flex-shrink:0}
+.arilia-header .arilia-logo-image,.arilia-footer .arilia-logo-image{display:block;flex:none;width:247.5px;height:165px;max-width:none;object-fit:contain;mix-blend-mode:multiply}
+.arilia-header .arilia-header-inner{padding-top:4px;padding-bottom:4px;min-height:0}
+.arilia-footer .arilia-logo-link{width:180px;height:120px}
+.arilia-footer .arilia-logo-image{width:270px;height:180px}
+@media(max-width:600px){
+ .arilia-header .arilia-logo-link{width:140px;height:92px}
+ .arilia-header .arilia-logo-image{width:210px;height:140px}
+ .arilia-header .arilia-header-inner{padding-block:3px}
+}

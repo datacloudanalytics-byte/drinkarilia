@@ -1,0 +1,22 @@
+ARILIA 1.26 IMAGE UPDATE
+
+Seven supplied individual bottle photographs replace the flavour card images,
+product detail images, and audience thumbnails. Story photography also uses
+the supplied Pomegranate + Apple bottle. Fresh v126 URLs bypass stale assets.
+The supplied seven-flavour banner replaces the Flavours hero and lineup images.
+It is displayed whole on phones because no new portrait version was supplied.
+The supplied gym poster replaces the previous fitness video on the men card.
+Visible theme copy says Beet + Lemon + Ginger. Existing URLs remain unchanged.
+Previously saved WordPress blocks receive image changes at render time.
+No starter-page import or page-content overwrite is required.
+
+Install: Appearance > Themes > Add New > Upload Theme; select this ZIP and
+Replace current with uploaded. Clear GoDaddy cache and refresh in a private tab.
+Keep the previous theme ZIP or a hosting backup for rollback.
+
+Artwork limitation: the supplied group banner and gym poster contain older
+logos and some Juice / Lime / 340 mL labels baked into the images. These source
+images are used as supplied, without repainting labels. Individual bottle
+photos use the new logo, Drink wording, and 250 mL labels.
+
+Not published to the live website. See VALIDATION-1.26.md for check results.

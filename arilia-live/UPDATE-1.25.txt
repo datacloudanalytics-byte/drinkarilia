@@ -1,0 +1,1 @@
+1.25: supplied logo enlarged in header/footer; CSS multiply blending removes visible white rectangle on ivory; visual outer padding clipped while logo and tagline remain intact. Source artwork unchanged. ZIP verified; browser rendering and live installation not verified. Upload replacement and clear GoDaddy cache.

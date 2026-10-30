@@ -163,3 +163,5 @@ Two more homepage slides: Cranberry Drink ("A little tart. A beautiful twist.") 
 
 1.22 SLIDER
 Dragon Fruit Drink and Mango Drink slides added (six slides, 3 seconds each), landscape on desktop and portrait under 1024px, each linking to its flavour page.
+
+1.26: See UPDATE-1.26.txt and VALIDATION-1.26.md for current image update and check results.

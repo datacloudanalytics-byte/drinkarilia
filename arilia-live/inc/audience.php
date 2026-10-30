@@ -34,7 +34,7 @@ function arilia_audience_copy() {
                 'icon'  => 'men',
                 'title' => 'For men’s active lifestyle',
                 'items' => array(
-                    array( 'beet-lime-ginger', 'Beet + Lime + Ginger Drink', 'This powerful combination brings together the natural vitality of beets, the freshness of lime and the warming kick of ginger. Ideal for supporting an active lifestyle and maintaining energy throughout the day.' ),
+                    array( 'beet-lime-ginger', 'Beet + Lemon + Ginger Drink', 'This powerful combination brings together the natural vitality of beets, the freshness of lemon and the warming kick of ginger. Ideal for supporting an active lifestyle and maintaining energy throughout the day.' ),
                     array( 'pomegranate', 'Pomegranate Drink', 'A favourite among fitness enthusiasts, pomegranate provides naturally occurring antioxidants that support overall wellness and daily performance.' ),
                 ),
             ),
@@ -51,7 +51,7 @@ function arilia_audience_copy() {
                 'icon'  => 'energy',
                 'title' => 'For daily energy & vitality',
                 'items' => array(
-                    array( 'beet-lime-ginger', 'Beet + Lime + Ginger Drink', 'A naturally invigorating blend that helps you feel refreshed and ready to take on the day.' ),
+                    array( 'beet-lime-ginger', 'Beet + Lemon + Ginger Drink', 'A naturally invigorating blend that helps you feel refreshed and ready to take on the day.' ),
                     array( 'mango', 'Mango Drink', 'Provides natural fruit goodness and refreshing hydration for people with busy lifestyles.' ),
                     array( 'dragon-fruit', 'Dragon Fruit Drink', 'A colourful superfruit beverage that supports hydration and everyday wellness.' ),
                 ),
@@ -63,7 +63,7 @@ function arilia_audience_copy() {
                 'items' => array(
                     array( 'pomegranate', 'Pomegranate Drink', '' ),
                     array( 'cranberry', 'Cranberry Drink', '' ),
-                    array( 'beet-lime-ginger', 'Beet + Lime + Ginger Drink', 'These nutrient-rich favourites help seniors stay refreshed, active and energised throughout the day.' ),
+                    array( 'beet-lime-ginger', 'Beet + Lemon + Ginger Drink', 'These nutrient-rich favourites help seniors stay refreshed, active and energised throughout the day.' ),
                 ),
             ),
         ),
@@ -91,7 +91,7 @@ function arilia_audience_blocks() {
         if ( ! empty( $g['lead'] ) ) { $inner .= arilia_p( esc_html( $g['lead'] ), 'arilia-audience-lead' ); }
         foreach ( $g['items'] as $it ) {
             $product = arilia_products()[ $it[0] ];
-            $thumb = arilia_image( 'bottle-' . $it[0] . '-v114.webp', 'Arilia ' . $it[1] . ' 250 ml', 'arilia-audience-thumb' );
+            $thumb = arilia_image( 'bottle-' . $it[0] . '-v126.webp', 'Arilia ' . $it[1] . ' 250 ml', 'arilia-audience-thumb' );
             $name  = arilia_p( '<a href="' . esc_url( arilia_url( $it[0] ) ) . '">' . esc_html( $it[1] ) . '</a>', 'arilia-audience-name' );
             $copy  = $it[2] ? arilia_p( esc_html( $it[2] ), 'arilia-audience-copy' ) : '';
             $inner .= arilia_group( $thumb . arilia_group( $name . $copy, 'arilia-audience-text' ), 'arilia-audience-item' );
@@ -114,16 +114,12 @@ function arilia_audience_blocks() {
 /** Photo or video header for an audience card. */
 function arilia_audience_media( $icon ) {
     $photos = array(
-        'women'   => array( 'audience-women-v120.webp', 'Three friends sharing Arilia cranberry drinks', 960, 720 ),
-        'kids'    => array( 'audience-kids-v120.webp', 'Children laughing with glasses of Arilia mango, strawberry and dragon fruit drinks', 960, 720 ),
-        'energy'  => array( 'audience-energy-v120.webp', 'Arilia Beet + Lime + Ginger and Pomegranate bottles with fresh ingredients', 960, 720 ),
-        'seniors' => array( 'audience-seniors-v120.webp', 'Three generations enjoying Arilia on a camping trip', 960, 720 ),
+        'men'     => array( 'audience-men-v126.webp', 'Feel good. Show up. Arilia drinks in a gym setting.', 1024, 1536 ),
+        'women'   => array( 'audience-women-v124.webp', 'Three friends sharing Arilia cranberry drinks', 960, 720 ),
+        'kids'    => array( 'audience-kids-v124.webp', 'Children laughing with glasses of Arilia mango, strawberry and dragon fruit drinks', 960, 720 ),
+        'energy'  => array( 'audience-energy-v124.webp', 'Arilia Beet + Lemon + Ginger and Pomegranate bottles with fresh ingredients', 960, 720 ),
+        'seniors' => array( 'audience-seniors-v124.webp', 'Three generations enjoying Arilia on a camping trip', 960, 720 ),
     );
-    if ( 'men' === $icon ) {
-        $src = arilia_asset( 'fitness-v120.mp4' ); $poster = arilia_asset( 'fitness-poster-v120.webp' );
-        $video = '<figure class="wp-block-video arilia-audience-media arilia-audience-media--video"><video autoplay loop muted playsinline preload="metadata" poster="' . esc_url( $poster ) . '" src="' . esc_url( $src ) . '" aria-label="Feel good. Show up. Arilia as part of a gym routine."></video></figure>';
-        return arilia_b( 'video', array( 'className' => 'arilia-audience-media arilia-audience-media--video' ), $video );
-    }
     if ( ! isset( $photos[ $icon ] ) ) { return ''; }
     $ph = $photos[ $icon ];
     return arilia_b( 'image', array( 'sizeSlug' => 'full', 'linkDestination' => 'none', 'className' => 'arilia-audience-media' ), '<figure class="wp-block-image size-full arilia-audience-media"><img src="' . esc_url( arilia_asset( $ph[0] ) ) . '" alt="' . esc_attr( $ph[1] ) . '" width="' . $ph[2] . '" height="' . $ph[3] . '" loading="lazy" decoding="async"/></figure>' );
@@ -150,7 +146,8 @@ add_filter( 'render_block_core/group', 'arilia_audience_inject', 30, 2 );
 function arilia_audience_media_inject( $html, $block ) {
     $classes = isset( $block['attrs']['className'] ) ? $block['attrs']['className'] : '';
     if ( preg_match( '/arilia-audience-card--([a-z]+)/', $classes, $m ) ) {
-        $stale = false !== strpos( $html, 'arilia-audience-media' ) && false === strpos( $html, '-v120.' );
+        $expected = array( 'men' => 'audience-men-v126.webp', 'women' => 'audience-women-v124.webp', 'kids' => 'audience-kids-v124.webp', 'energy' => 'audience-energy-v124.webp', 'seniors' => 'audience-seniors-v124.webp' );
+        $stale = isset( $expected[$m[1]] ) && false !== strpos( $html, 'arilia-audience-media' ) && false === strpos( $html, $expected[$m[1]] );
         if ( $stale ) { $html = preg_replace( '/<figure class="wp-block-(?:image|video)[^"]*arilia-audience-media[^"]*"[^>]*>.*?<\/figure>/s', '', $html, 1 ); }
         if ( $stale || false === strpos( $html, 'arilia-audience-media' ) ) {
             $media = do_blocks( arilia_audience_media( $m[1] ) );
