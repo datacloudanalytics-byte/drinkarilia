@@ -1,0 +1,3 @@
+ARILIA 1.30 — OUR STORY HERO
+
+The heritage poster ("A little fruit. A long Indian story.") is now the hero of the Our Story page, shown whole at full width like the Flavours poster, with the heritage copy directly beneath it, then the origin story. Render-time; no page re-import.

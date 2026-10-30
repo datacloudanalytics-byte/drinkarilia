@@ -587,3 +587,14 @@ body.home .arilia-announcement,body.blog.arilia-front .arilia-announcement{displ
 .arilia-main .arilia-about-heritage__copy p{max-width:52ch;margin:0 0 14px!important}
 .arilia-main .arilia-about-heritage__copy .arilia-about-sign{font-family:Georgia,serif;font-style:italic;font-size:19px!important;color:#a4122e!important;margin-top:8px!important}
 @media(max-width:900px){.arilia-main .arilia-about-heritage{grid-template-columns:1fr}.arilia-main .arilia-about-heritage__copy h2{max-width:none}}
+
+/* 1.30: the heritage poster is the Our Story hero, shown whole at full width; the heritage copy follows as a two-column intro. */
+.arilia-main .arilia-about-poster{background:#f3e7d3;line-height:0}
+.arilia-main .arilia-about-poster__image{margin:0 auto!important;max-width:1900px}
+.arilia-main .arilia-about-poster__image img{display:block;width:100%;height:auto;max-height:calc(100svh - 92px);object-fit:contain;object-position:center}
+.arilia-main .arilia-about-heritage{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start;background:#fffaf2;border-top:0;padding-top:clamp(40px,6vw,64px);padding-bottom:clamp(40px,6vw,64px)}
+.arilia-main .arilia-about-heritage__head h2{font-size:clamp(32px,3.8vw,52px);line-height:1.06;margin:0!important;max-width:12ch}
+.arilia-main .arilia-about-heritage__copy{display:grid;gap:0}
+.arilia-main .arilia-about-heritage__copy p:first-child{font-size:19px;color:#302b28;max-width:46ch}
+.arilia-main .arilia-about-origin{background:#f6ede6}
+@media(max-width:900px){.arilia-main .arilia-about-heritage{grid-template-columns:1fr}.arilia-main .arilia-about-heritage__head h2{max-width:none}}

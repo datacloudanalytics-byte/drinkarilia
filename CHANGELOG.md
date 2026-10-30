@@ -1,5 +1,9 @@
 # Changelog
 
+## Live 1.x line — 1.30.0 — 2026-10-30
+
+- The heritage poster is the Our Story hero (whole, full width); heritage copy follows as a two-column intro, then the origin story.
+
 ## Live 1.x line — 1.29.0 — 2026-10-30
 
 - Our Story gains a pomegranate heritage section ("A little fruit. A long Indian story.") between the origin story and the fruit-to-bottle steps: supplied poster shown whole, supplied copy as live text.

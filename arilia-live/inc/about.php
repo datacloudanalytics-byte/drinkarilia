@@ -87,9 +87,9 @@ function arilia_about_blocks() {
     $c = arilia_about_copy();
 
     $hero = arilia_group(
-        arilia_group( arilia_p( esc_html( $c['eyebrow'] ), 'arilia-eyebrow' ) . arilia_h( esc_html( $c['heading'] ), 1, 'arilia-about-title' ) . arilia_p( esc_html( $c['lead'] ), 'arilia-about-lead' ), 'arilia-about-hero__copy' ) .
-        arilia_group( arilia_image( 'bottle-pomegranate-v126.webp', 'Arilia Pomegranate Drink, the first Arilia flavour, in the 250 ml double-bulb bottle', 'arilia-about-hero__image' ), 'arilia-about-hero__art' ),
-        'arilia-about-hero', 'section'
+        arilia_h( 'A little fruit. A long Indian story.', 1, 'screen-reader-text' ) .
+        arilia_image( 'heritage-pomegranate-v129.webp', 'A little fruit. A long Indian story. Arilia Pomegranate Drink with pomegranates in a Mughal-style garden. Arilia. A Little Wonder.', 'arilia-about-poster__image' ),
+        'arilia-about-poster', 'section'
     );
 
     $o = $c['origin'];
@@ -106,8 +106,8 @@ function arilia_about_blocks() {
     foreach ( $h['body'] as $para ) { $heritage_copy .= arilia_p( esc_html( $para ) ); }
     $heritage_copy .= arilia_p( esc_html( $h['sign'] ), 'arilia-about-sign' );
     $heritage = arilia_group(
-        arilia_group( arilia_image( 'heritage-pomegranate-v129.webp', 'A little fruit. A long Indian story. Arilia Pomegranate Drink with pomegranates in a Mughal-style garden', 'arilia-about-heritage__image' ), 'arilia-about-heritage__art' ) .
-        arilia_group( $heritage_copy, 'arilia-about-heritage__copy' ),
+        arilia_group( arilia_p( esc_html( $h['eyebrow'] ), 'arilia-eyebrow' ) . arilia_h( esc_html( $h['heading'] ), 2 ), 'arilia-about-heritage__head' ) .
+        arilia_group( str_replace( arilia_p( esc_html( $h['eyebrow'] ), 'arilia-eyebrow' ) . arilia_h( esc_html( $h['heading'] ), 2 ), '', $heritage_copy ), 'arilia-about-heritage__copy' ),
         'arilia-about-heritage', 'section'
     );
 
@@ -164,7 +164,7 @@ function arilia_about_blocks() {
         'arilia-connect arilia-about-cta', 'section', 'connect'
     );
 
-    return arilia_group( $hero . $origin . $heritage . $process . $numbers . $rind . $gallery . $values . $cta, 'arilia-about' );
+    return arilia_group( $hero . $heritage . $origin . $process . $numbers . $rind . $gallery . $values . $cta, 'arilia-about' );
 }
 
 /** Replace the saved Our Story page content at render time. */
